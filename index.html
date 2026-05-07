@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School Solutions Global &mdash; Every Dollar Has a Job</title>
+<meta name="description" content="A connected ecosystem of independent fundraising professionals serving school music and performing arts programs across America.">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:      #0d0d0d;
+  --ink2:     #2a2a2a;
+  --paper:    #faf8f4;
+  --surface:  #ffffff;
+  --s2:       #f4f1eb;
+  --s3:       #edeae2;
+  --rule:     #e4e0d7;
+  --muted:    #888278;
+  --dim:      #bbb5ab;
+  --gold:     #c8943a;
+  --gold-lt:  #fdf5e6;
+  --green:    #1a6b3c;
+  --green-lt: #eaf4ee;
+  --navy:     #063e87;
+  --navy-lt:  #e8f0fb;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--paper);color:var(--ink);font-family:'Outfit',sans-serif;overflow-x:hidden;}
+
+/* ── NAV ── */
+nav{
+  position:sticky;top:0;z-index:200;
+  background:rgba(250,248,244,0.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--rule);
+  padding:0 48px;height:60px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.nav-logo{display:flex;align-items:center;gap:10px;}
+.nav-mark{
+  width:32px;height:32px;border-radius:7px;
+  background:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Instrument Serif',serif;
+  font-size:1rem;font-weight:400;font-style:italic;
+  color:var(--gold);
+}
+.nav-name{
+  font-family:'Instrument Serif',serif;
+  font-size:1rem;color:var(--ink);
+  letter-spacing:-0.01em;
+}
+.nav-name em{color:var(--gold);font-style:italic;}
+.nav-links{display:flex;align-items:center;gap:28px;}
+.nav-link{
+  font-family:'DM Mono',monospace;font-size:0.58rem;
+  text-transform:uppercase;letter-spacing:0.1em;
+  color:var(--muted);text-decoration:none;transition:color 0.15s;
+}
+.nav-link:hover{color:var(--ink);}
+.nav-cta{
+  font-family:'Outfit',sans-serif;font-size:0.78rem;font-weight:700;
+  padding:8px 18px;border-radius:5px;
+  background:var(--ink);color:white;
+  text-decoration:none;border:none;cursor:pointer;
+  transition:all 0.15s;
+}
+.nav-cta:hover{background:var(--ink2);transform:translateY(-1px);}
+
+/* ── HERO ── */
+.hero{
+  min-height:92vh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  padding:80px 24px 64px;
+  text-align:center;position:relative;overflow:hidden;
+}
+
+/* Subtle radial glow */
+.hero::before{
+  content:'';position:absolute;
+  top:-20%;left:50%;transform:translateX(-50%);
+  width:800px;height:800px;border-radius:50%;
+  background:radial-gradient(circle,rgba(200,148,58,0.07) 0%,transparent 70%);
+  pointer-events:none;
+}
+
+.hero-eyebrow{
+  font-family:'DM Mono',monospace;font-size:0.6rem;
+  text-transform:uppercase;letter-spacing:0.2em;
+  color:var(--gold);margin-bottom:24px;
+  display:flex;align-items:center;gap:12px;
+  animation:fadeUp 0.6s ease both;
+}
+.hero-eyebrow::before,.hero-eyebrow::after{
+  content:'';width:32px;height:1px;background:var(--gold);opacity:0.4;
+}
+
+.hero-h1{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(2.8rem,7vw,6rem);
+  font-weight:400;color:var(--ink);
+  letter-spacing:-0.03em;line-height:1.0;
+  margin-bottom:24px;
+  animation:fadeUp 0.6s ease 0.1s both;
+}
+.hero-h1 em{font-style:italic;color:var(--gold);}
+.hero-h1 .line2{display:block;}
+
+.hero-sub{
+  font-size:1.05rem;color:var(--muted);
+  line-height:1.7;max-width:520px;
+  margin-bottom:40px;
+  animation:fadeUp 0.6s ease 0.2s both;
+}
+
+.hero-actions{
+  display:flex;gap:12px;flex-wrap:wrap;justify-content:center;
+  margin-bottom:64px;
+  animation:fadeUp 0.6s ease 0.3s both;
+}
+.btn-ink{
+  font-family:'Outfit',sans-serif;font-size:0.88rem;font-weight:700;
+  padding:13px 26px;border-radius:5px;
+  background:var(--ink);color:white;
+  text-decoration:none;border:none;cursor:pointer;
+  transition:all 0.2s;display:inline-flex;align-items:center;gap:8px;
+}
+.btn-ink:hover{background:var(--ink2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.15);}
+.btn-outline{
+  font-family:'Outfit',sans-serif;font-size:0.88rem;font-weight:600;
+  padding:12px 26px;border-radius:5px;
+  background:transparent;color:var(--ink);
+  text-decoration:none;border:1px solid var(--rule);cursor:pointer;
+  transition:all 0.2s;
+}
+.btn-outline:hover{border-color:var(--ink);background:var(--s2);}
+
+/* Hero stat row */
+.hero-stats{
+  display:flex;align-items:center;gap:0;
+  background:var(--surface);border:1px solid var(--rule);
+  border-radius:10px;padding:0;overflow:hidden;
+  animation:fadeUp 0.6s ease 0.4s both;
+  box-shadow:0 2px 12px rgba(0,0,0,0.06);
+}
+.hs-item{padding:20px 32px;text-align:center;border-right:1px solid var(--rule);}
+.hs-item:last-child{border-right:none;}
+.hs-val{
+  font-family:'Instrument Serif',serif;
+  font-size:1.8rem;color:var(--ink);
+  letter-spacing:-0.03em;line-height:1;
+  margin-bottom:4px;
+}
+.hs-val em{font-style:italic;color:var(--gold);}
+.hs-lbl{
+  font-family:'DM Mono',monospace;font-size:0.52rem;
+  text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);
+}
+
+/* ── QUOTE BREAK ── */
+.quote-break{
+  background:var(--ink);
+  padding:72px 48px;text-align:center;
+}
+.qb-inner{max-width:760px;margin:0 auto;}
+.qb-text{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(1.5rem,3.5vw,2.6rem);
+  font-style:italic;color:white;
+  line-height:1.35;letter-spacing:-0.02em;
+  margin-bottom:20px;
+}
+.qb-text em{color:var(--gold);font-style:italic;}
+.qb-attr{
+  font-family:'DM Mono',monospace;font-size:0.56rem;
+  text-transform:uppercase;letter-spacing:0.14em;
+  color:rgba(255,255,255,0.3);
+}
+
+/* ── SECTION BASE ── */
+.section{padding:96px 48px;}
+.section-inner{max-width:1100px;margin:0 auto;}
+.section-eyebrow{
+  font-family:'DM Mono',monospace;font-size:0.58rem;
+  text-transform:uppercase;letter-spacing:0.18em;color:var(--gold);
+  margin-bottom:12px;display:flex;align-items:center;gap:10px;
+}
+.section-eyebrow::before{content:'';width:22px;height:2px;background:var(--gold);}
+.section-h2{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(1.8rem,4vw,3rem);
+  font-weight:400;color:var(--ink);
+  letter-spacing:-0.03em;line-height:1.05;
+  margin-bottom:14px;
+}
+.section-h2 em{font-style:italic;color:var(--gold);}
+.section-sub{font-size:0.98rem;color:var(--muted);line-height:1.72;max-width:540px;}
+
+/* ── HOW IT WORKS ── */
+.hiw{background:var(--surface);}
+.hiw-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:24px;margin-top:56px;
+}
+.hiw-card{
+  background:var(--paper);border:1px solid var(--rule);
+  border-radius:10px;padding:32px 28px;
+  position:relative;overflow:hidden;
+  transition:all 0.2s;
+}
+.hiw-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,0.08);border-color:var(--gold);}
+.hiw-num{
+  font-family:'Instrument Serif',serif;
+  font-size:4rem;font-style:italic;
+  color:rgba(0,0,0,0.04);line-height:1;
+  position:absolute;top:16px;right:20px;
+}
+.hiw-icon{font-size:1.6rem;margin-bottom:16px;}
+.hiw-title{
+  font-family:'Instrument Serif',serif;
+  font-size:1.2rem;color:var(--ink);
+  letter-spacing:-0.01em;margin-bottom:8px;
+}
+.hiw-title em{font-style:italic;color:var(--gold);}
+.hiw-text{font-size:0.85rem;color:var(--muted);line-height:1.72;}
+
+/* ── FOR REPS ── */
+.for-reps{background:var(--paper);}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.rep-benefits{display:flex;flex-direction:column;gap:16px;margin-top:32px;}
+.rb-item{
+  display:flex;align-items:flex-start;gap:16px;
+  padding:18px 20px;background:var(--surface);
+  border:1px solid var(--rule);border-radius:8px;
+  transition:all 0.15s;
+}
+.rb-item:hover{border-color:var(--gold);background:var(--gold-lt);}
+.rb-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px;}
+.rb-title{font-size:0.85rem;font-weight:700;color:var(--ink);margin-bottom:2px;}
+.rb-text{font-size:0.78rem;color:var(--muted);line-height:1.6;}
+
+/* Rep showcase card */
+.rep-showcase{
+  background:var(--ink);border-radius:12px;
+  padding:32px;position:relative;overflow:hidden;
+}
+.rep-showcase::before{
+  content:'';position:absolute;
+  top:-40px;right:-40px;width:200px;height:200px;
+  border-radius:50%;background:rgba(200,148,58,0.08);
+}
+.rs-label{
+  font-family:'DM Mono',monospace;font-size:0.54rem;
+  text-transform:uppercase;letter-spacing:0.14em;
+  color:rgba(255,255,255,0.3);margin-bottom:20px;
+  padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.07);
+}
+.rs-rep{display:flex;gap:14px;align-items:center;margin-bottom:20px;}
+.rs-av{
+  width:48px;height:48px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Instrument Serif',serif;
+  font-size:1.1rem;font-style:italic;color:white;
+  flex-shrink:0;
+}
+.rs-name{font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;}
+.rs-brand{font-family:'DM Mono',monospace;font-size:0.54rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--gold);}
+.rs-market{font-family:'DM Mono',monospace;font-size:0.52rem;color:rgba(255,255,255,0.3);margin-top:1px;}
+.rs-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px;}
+.rss-item{background:rgba(255,255,255,0.05);border-radius:5px;padding:10px;}
+.rss-val{font-family:'Instrument Serif',serif;font-size:1.2rem;color:var(--gold);letter-spacing:-0.02em;line-height:1;}
+.rss-lbl{font-family:'DM Mono',monospace;font-size:0.5rem;text-transform:uppercase;letter-spacing:0.06em;color:rgba(255,255,255,0.3);margin-top:3px;}
+.rs-join{
+  width:100%;padding:11px;border-radius:5px;
+  background:var(--gold);color:var(--ink);
+  font-family:'Outfit',sans-serif;font-size:0.8rem;font-weight:700;
+  border:none;cursor:pointer;transition:all 0.15s;text-align:center;
+  text-decoration:none;display:block;
+}
+.rs-join:hover{background:#d9a444;transform:translateY(-1px);}
+
+/* ── FOR DIRECTORS ── */
+.for-directors{background:var(--surface);}
+.director-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:16px;margin-top:48px;
+}
+.dir-card{
+  background:var(--paper);border:1px solid var(--rule);
+  border-radius:10px;padding:28px 24px;
+  transition:all 0.2s;
+}
+.dir-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,0.07);border-color:var(--ink);}
+.dir-icon{font-size:1.5rem;margin-bottom:14px;}
+.dir-title{font-family:'Instrument Serif',serif;font-size:1.1rem;color:var(--ink);margin-bottom:7px;letter-spacing:-0.01em;}
+.dir-text{font-size:0.82rem;color:var(--muted);line-height:1.7;}
+.dir-link{
+  display:inline-flex;align-items:center;gap:5px;
+  font-family:'DM Mono',monospace;font-size:0.54rem;
+  text-transform:uppercase;letter-spacing:0.08em;
+  color:var(--gold);text-decoration:none;margin-top:12px;
+  transition:gap 0.15s;
+}
+.dir-link:hover{gap:9px;}
+
+/* ── REPS NETWORK ── */
+.network{background:var(--ink);padding:96px 48px;}
+.network .section-eyebrow{color:var(--gold);}
+.network .section-eyebrow::before{background:var(--gold);}
+.network .section-h2{color:white;}
+.network .section-sub{color:rgba(255,255,255,0.45);}
+.rep-cards{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:16px;margin-top:48px;
+}
+.rep-card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:10px;padding:24px;
+  transition:all 0.2s;
+  position:relative;overflow:hidden;
+}
+.rep-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;
+  height:2px;transition:opacity 0.2s;
+}
+.rep-card:hover{background:rgba(255,255,255,0.07);border-color:rgba(255,255,255,0.16);}
+.rep-card:hover::before{opacity:1;}
+.rc-color{width:36px;height:36px;border-radius:8px;margin-bottom:14px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Instrument Serif',serif;font-size:0.9rem;font-style:italic;color:white;}
+.rc-name{font-size:0.88rem;font-weight:700;color:white;margin-bottom:2px;}
+.rc-brand{font-family:'DM Mono',monospace;font-size:0.54rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;}
+.rc-market{font-family:'DM Mono',monospace;font-size:0.52rem;text-transform:uppercase;letter-spacing:0.06em;color:rgba(255,255,255,0.25);}
+.rc-status{
+  display:inline-block;font-family:'DM Mono',monospace;
+  font-size:0.5rem;text-transform:uppercase;letter-spacing:0.08em;
+  padding:3px 8px;border-radius:3px;margin-top:12px;
+}
+.rc-status.active{background:rgba(26,107,60,0.2);color:#4ade80;}
+.rc-status.warm{background:rgba(200,148,58,0.15);color:var(--gold);}
+
+.network-cta{
+  margin-top:48px;text-align:center;
+}
+.network-cta p{font-size:0.9rem;color:rgba(255,255,255,0.4);margin-bottom:20px;font-style:italic;}
+
+/* ── PHILOSOPHY ── */
+.philosophy{background:var(--paper);}
+.philosophy-body{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:72px;align-items:start;margin-top:56px;
+}
+.phil-left{}
+.phil-pull{
+  font-family:'Instrument Serif',serif;
+  font-size:1.3rem;font-style:italic;
+  color:var(--ink2);line-height:1.6;
+  padding:24px 28px;
+  border-left:3px solid var(--gold);
+  background:var(--gold-lt);
+  border-radius:0 8px 8px 0;
+  margin-bottom:24px;
+}
+.phil-text{font-size:0.92rem;color:var(--muted);line-height:1.8;}
+.phil-right{display:flex;flex-direction:column;gap:20px;}
+.phil-step{display:flex;gap:16px;align-items:flex-start;}
+.ps-num{
+  font-family:'Instrument Serif',serif;
+  font-size:1.6rem;font-style:italic;
+  color:var(--gold);line-height:1;flex-shrink:0;
+  width:28px;text-align:center;margin-top:2px;
+}
+.ps-title{font-size:0.88rem;font-weight:700;color:var(--ink);margin-bottom:4px;}
+.ps-text{font-size:0.8rem;color:var(--muted);line-height:1.65;}
+
+/* ── CTA SECTION ── */
+.cta-final{
+  background:var(--gold);
+  padding:96px 48px;text-align:center;
+  position:relative;overflow:hidden;
+}
+.cta-final::before{
+  content:'';position:absolute;
+  top:-100px;left:50%;transform:translateX(-50%);
+  width:700px;height:700px;border-radius:50%;
+  background:rgba(0,0,0,0.05);
+}
+.cf-inner{position:relative;z-index:2;max-width:580px;margin:0 auto;}
+.cf-eyebrow{
+  font-family:'DM Mono',monospace;font-size:0.6rem;
+  text-transform:uppercase;letter-spacing:0.2em;
+  color:rgba(0,0,0,0.4);margin-bottom:14px;
+}
+.cf-title{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(2rem,5vw,3.8rem);
+  color:var(--ink);letter-spacing:-0.03em;
+  line-height:1.0;margin-bottom:14px;
+}
+.cf-title em{font-style:italic;}
+.cf-sub{font-size:1rem;color:rgba(0,0,0,0.55);line-height:1.65;margin-bottom:36px;}
+.cf-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn-dark{
+  font-family:'Outfit',sans-serif;font-size:0.88rem;font-weight:700;
+  padding:13px 28px;border-radius:5px;
+  background:var(--ink);color:white;
+  text-decoration:none;border:none;cursor:pointer;
+  transition:all 0.2s;display:inline-flex;align-items:center;gap:8px;
+}
+.btn-dark:hover{background:var(--ink2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.2);}
+.btn-white-outline{
+  font-family:'Outfit',sans-serif;font-size:0.88rem;font-weight:600;
+  padding:12px 28px;border-radius:5px;
+  background:transparent;color:var(--ink);
+  text-decoration:none;border:2px solid rgba(0,0,0,0.2);cursor:pointer;
+  transition:all 0.2s;
+}
+.btn-white-outline:hover{border-color:var(--ink);background:rgba(0,0,0,0.06);}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--ink);padding:48px;
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:40px;
+}
+.footer-brand-col{}
+.footer-logo-name{
+  font-family:'Instrument Serif',serif;
+  font-size:1.1rem;color:white;letter-spacing:-0.01em;margin-bottom:8px;
+}
+.footer-logo-name em{color:var(--gold);font-style:italic;}
+.footer-tagline{
+  font-family:'DM Mono',monospace;font-size:0.54rem;
+  text-transform:uppercase;letter-spacing:0.12em;
+  color:rgba(255,255,255,0.25);margin-bottom:16px;
+}
+.footer-powered{
+  font-family:'DM Mono',monospace;font-size:0.52rem;
+  text-transform:uppercase;letter-spacing:0.1em;
+  color:rgba(255,255,255,0.15);
+}
+.footer-col-title{
+  font-family:'DM Mono',monospace;font-size:0.54rem;
+  text-transform:uppercase;letter-spacing:0.12em;
+  color:rgba(255,255,255,0.3);margin-bottom:14px;
+}
+.footer-links{display:flex;flex-direction:column;gap:8px;}
+.footer-link{
+  font-size:0.82rem;color:rgba(255,255,255,0.45);
+  text-decoration:none;transition:color 0.15s;
+}
+.footer-link:hover{color:white;}
+.footer-bottom{
+  background:var(--ink);padding:0 48px 24px;
+  display:flex;align-items:center;justify-content:space-between;
+  border-top:1px solid rgba(255,255,255,0.05);padding-top:20px;
+  flex-wrap:wrap;gap:8px;
+}
+.fb-copy{
+  font-family:'DM Mono',monospace;font-size:0.52rem;
+  text-transform:uppercase;letter-spacing:0.08em;
+  color:rgba(255,255,255,0.18);
+}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+
+@media(max-width:960px){
+  .hiw-grid,.director-grid,.rep-cards{grid-template-columns:1fr 1fr;}
+  .two-col{grid-template-columns:1fr;gap:40px;}
+  .philosophy-body{grid-template-columns:1fr;gap:40px;}
+  footer{grid-template-columns:1fr 1fr;gap:32px;}
+}
+@media(max-width:640px){
+  nav{padding:0 18px;}
+  .nav-links{display:none;}
+  .section{padding:60px 20px;}
+  .hero{padding:60px 20px 48px;}
+  .hero-stats{flex-direction:column;}
+  .hs-item{border-right:none;border-bottom:1px solid var(--rule);width:100%;}
+  .hs-item:last-child{border-bottom:none;}
+  .hiw-grid,.director-grid,.rep-cards{grid-template-columns:1fr;}
+  footer{grid-template-columns:1fr;padding:32px 20px;}
+  .footer-bottom{padding:16px 20px;}
+  .quote-break{padding:48px 20px;}
+  .cta-final{padding:64px 20px;}
+  .network{padding:64px 20px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-mark">S</div>
+    <div class="nav-name">School Solutions <em>Global</em></div>
+  </div>
+  <div class="nav-links">
+    <a href="#how" class="nav-link">How It Works</a>
+    <a href="#reps" class="nav-link">For Reps</a>
+    <a href="#directors" class="nav-link">For Directors</a>
+    <a href="#network" class="nav-link">Our Network</a>
+    <a href="https://app.schoolsolutionsglobal.com" class="nav-cta">Sign In &rarr;</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">School Solutions Global</div>
+  <h1 class="hero-h1">
+    Every dollar<br>
+    <em>has a job.</em>
+  </h1>
+  <p class="hero-sub">
+    A connected ecosystem of independent fundraising professionals serving school music and performing arts programs across America.
+  </p>
+  <div class="hero-actions">
+    <a href="#directors" class="btn-ink">Start with a Budget Session &rarr;</a>
+    <a href="#reps" class="btn-outline">Join as a Rep</a>
+  </div>
+  <div class="hero-stats">
+    <div class="hs-item">
+      <div class="hs-val">3</div>
+      <div class="hs-lbl">Active Reps</div>
+    </div>
+    <div class="hs-item">
+      <div class="hs-val"><em>FL &amp; NV</em></div>
+      <div class="hs-lbl">Markets Served</div>
+    </div>
+    <div class="hs-item">
+      <div class="hs-val">$0</div>
+      <div class="hs-lbl">Budget Session Cost</div>
+    </div>
+    <div class="hs-item">
+      <div class="hs-val">100<em>%</em></div>
+      <div class="hs-lbl">Rep-Owned Brands</div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<div class="quote-break">
+  <div class="qb-inner">
+    <div class="qb-text">&#8220;Band programs don&#8217;t have a fundraising problem. They have a <em>budgeting</em> problem.&#8221;</div>
+    <div class="qb-attr">The philosophy behind every School Solutions Global campaign</div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="section hiw" id="how">
+  <div class="section-inner">
+    <div class="section-eyebrow">How It Works</div>
+    <h2 class="section-h2">Budget first.<br><em>Campaign second.</em></h2>
+    <p class="section-sub">Most directors guess their fundraising goal. We don&#8217;t. Every campaign starts with a clear picture of where the program stands and where it wants to go.</p>
+    <div class="hiw-grid">
+      <div class="hiw-card">
+        <div class="hiw-num">1</div>
+        <div class="hiw-icon">&#128203;</div>
+        <div class="hiw-title">Free <em>Budget Session</em></div>
+        <div class="hiw-text">Your SSG rep maps your district account, your booster account, your real expenses. You leave knowing your actual number &mdash; not a guess.</div>
+      </div>
+      <div class="hiw-card">
+        <div class="hiw-num">2</div>
+        <div class="hiw-icon">&#127912;</div>
+        <div class="hiw-title">Build the <em>Campaign</em></div>
+        <div class="hiw-text">A custom campaign page built around your budget, your students, and your story. Donation tiles tied directly to line items. Donors see exactly where their gift goes.</div>
+      </div>
+      <div class="hiw-card">
+        <div class="hiw-num">3</div>
+        <div class="hiw-icon">&#127919;</div>
+        <div class="hiw-title">Fund the <em>Program</em></div>
+        <div class="hiw-text">Students work their supporter list. Your rep tracks participation and keeps momentum. Campaign closes. Funds deposited. Budget accounted for.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR REPS -->
+<section class="section for-reps" id="reps">
+  <div class="section-inner">
+    <div class="two-col">
+      <div>
+        <div class="section-eyebrow">For Reps</div>
+        <h2 class="section-h2">Operate like a <em>company.</em><br>Own like a founder.</h2>
+        <p class="section-sub" style="margin-bottom:0">SSG is not a franchise. Every rep keeps full ownership of their brand, their customers, and their relationships. The ecosystem provides the infrastructure.</p>
+        <div class="rep-benefits">
+          <div class="rb-item"><div class="rb-icon">&#128295;</div><div><div class="rb-title">Shared Infrastructure</div><div class="rb-text">Campaign builder, budget tools, donor checkout, apparel workflow &mdash; built and maintained for you.</div></div></div>
+          <div class="rb-item"><div class="rb-icon">&#127968;</div><div><div class="rb-title">Your Brand, Your Customers</div><div class="rb-text">You operate under your own name. FloridaFundraiser. Driven Fundraising. First Coast Fundraising. SSG powers the back end.</div></div></div>
+          <div class="rb-item"><div class="rb-icon">&#128202;</div><div><div class="rb-title">Real Reporting</div><div class="rb-text">District, campus, and campaign-level reporting. Network tree view. Season dashboards. Know your book of business.</div></div></div>
+          <div class="rb-item"><div class="rb-icon">&#129504;</div><div><div class="rb-title">AI Support (Nik)</div><div class="rb-text">Product knowledge, proposal drafts, campaign strategy &mdash; always available, never wrong about your catalog.</div></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="rep-showcase">
+          <div class="rs-label">// Active Rep Network</div>
+          <div class="rs-rep">
+            <div class="rs-av" style="background:#c8943a">C</div>
+            <div>
+              <div class="rs-name">Charlie Rankin</div>
+              <div class="rs-brand">FloridaFundraiser.com</div>
+              <div class="rs-market">Florida &middot; Rep 001 &middot; Founder</div>
+            </div>
+          </div>
+          <div class="rs-rep">
+            <div class="rs-av" style="background:#063e87">M</div>
+            <div>
+              <div class="rs-name">Matt Roper</div>
+              <div class="rs-brand">Driven Fundraising</div>
+              <div class="rs-market">Las Vegas &amp; Nevada &middot; Rep 003</div>
+            </div>
+          </div>
+          <div class="rs-rep">
+            <div class="rs-av" style="background:#1a6b3c">S</div>
+            <div>
+              <div class="rs-name">Steve Hall</div>
+              <div class="rs-brand">First Coast Fundraising</div>
+              <div class="rs-market">Jacksonville, FL &middot; Rep 002</div>
+            </div>
+          </div>
+          <a href="mailto:charlie@floridafundraiser.com" class="rs-join">Inquire About Joining the Network &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR DIRECTORS -->
+<section class="section for-directors" id="directors">
+  <div class="section-inner">
+    <div class="section-eyebrow">For Directors</div>
+    <h2 class="section-h2">College prepared you to<br>teach music. <em>We handle the rest.</em></h2>
+    <p class="section-sub">College music education covers budgeting in one or two days. SSG reps fill the gap &mdash; giving directors the tools to run their program like a business.</p>
+    <div class="director-grid">
+      <div class="dir-card">
+        <div class="dir-icon">&#128203;</div>
+        <div class="dir-title">Free Budget Session</div>
+        <div class="dir-text">Know where you actually stand. District account, booster account, real expenses. Your rep builds the picture with you.</div>
+        <a href="https://app.schoolsolutionsglobal.com" class="dir-link">Start yours &rarr;</a>
+      </div>
+      <div class="dir-card">
+        <div class="dir-icon">&#127917;</div>
+        <div class="dir-title">Budget-Based Campaigns</div>
+        <div class="dir-text">Donors give to specific line items &mdash; uniforms, travel, instruments. Not a general fund. A job for every dollar.</div>
+        <a href="https://app.schoolsolutionsglobal.com" class="dir-link">See how it works &rarr;</a>
+      </div>
+      <div class="dir-card">
+        <div class="dir-icon">&#127926;</div>
+        <div class="dir-title">MusicEdToday</div>
+        <div class="dir-text">Free program page builder for band and choir directors. Ensembles, calendar, staff, awards, volunteer signups &mdash; all in one place.</div>
+        <a href="https://musicedtoday.com" class="dir-link">Build your page &rarr;</a>
+      </div>
+      <div class="dir-card">
+        <div class="dir-icon">&#128101;</div>
+        <div class="dir-title">Student Engagement</div>
+        <div class="dir-text">Gamified supporter lists. Section leaderboards. WE before ME. Students compete as a team, not against each other.</div>
+        <a href="https://app.schoolsolutionsglobal.com" class="dir-link">Learn more &rarr;</a>
+      </div>
+      <div class="dir-card">
+        <div class="dir-icon">&#128247;</div>
+        <div class="dir-title">Spirit Apparel</div>
+        <div class="dir-text">Online spirit stores, performance uniforms, and custom apparel. No minimums, ships direct. Your store always open.</div>
+        <a href="https://app.schoolsolutionsglobal.com" class="dir-link">See apparel &rarr;</a>
+      </div>
+      <div class="dir-card">
+        <div class="dir-icon">&#128722;</div>
+        <div class="dir-title">Product Fundraising</div>
+        <div class="dir-text">Poppin Popcorn, Lucky Goat Coffee, Fusion Tumblers, Trophy Nut. Premium products families actually want to buy.</div>
+        <a href="https://app.schoolsolutionsglobal.com" class="dir-link">See products &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NETWORK -->
+<section class="network" id="network">
+  <div class="section-inner">
+    <div class="section-eyebrow">The Network</div>
+    <h2 class="section-h2">Independent reps.<br>Shared infrastructure.</h2>
+    <p class="section-sub">Each SSG rep operates under their own brand in their own market. Every rep gets the same platform, the same tools, and the same AI support.</p>
+    <div class="rep-cards">
+      <div class="rep-card" style="border-top-color:var(--gold)">
+        <div class="rc-color" style="background:rgba(200,148,58,0.15);color:var(--gold)">CR</div>
+        <div class="rc-name">Charlie Rankin</div>
+        <div class="rc-brand" style="color:var(--gold)">FloridaFundraiser.com</div>
+        <div class="rc-market">Florida &middot; Rep 001</div>
+        <span class="rc-status active">Active</span>
+      </div>
+      <div class="rep-card" style="border-top-color:#6baed6">
+        <div class="rc-color" style="background:rgba(6,62,135,0.2);color:#6baed6">MR</div>
+        <div class="rc-name">Matt Roper</div>
+        <div class="rc-brand" style="color:#6baed6">Driven Fundraising</div>
+        <div class="rc-market">Las Vegas &amp; Nevada &middot; Rep 003</div>
+        <span class="rc-status warm">Onboarding</span>
+      </div>
+      <div class="rep-card" style="border-top-color:#52b788">
+        <div class="rc-color" style="background:rgba(26,107,60,0.2);color:#52b788">SH</div>
+        <div class="rc-name">Steve Hall</div>
+        <div class="rc-brand" style="color:#52b788">First Coast Fundraising</div>
+        <div class="rc-market">Jacksonville, FL &middot; Rep 002</div>
+        <span class="rc-status warm">Warm</span>
+      </div>
+    </div>
+    <div class="network-cta">
+      <p>Interested in bringing SSG to your market?</p>
+      <a href="mailto:charlie@floridafundraiser.com" class="btn-ink">Inquire About the Network &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="section philosophy">
+  <div class="section-inner">
+    <div class="section-eyebrow">Our Philosophy</div>
+    <h2 class="section-h2">The fundraiser isn&#8217;t<br>the strategy. <em>The budget is.</em></h2>
+    <div class="philosophy-body">
+      <div class="phil-left">
+        <div class="phil-pull">
+          &#8220;The gap between the baseline budget and the dream budget &mdash; that&#8217;s your campaign goal. Not a guess. A number with a job.&#8221;
+        </div>
+        <div class="phil-text">
+          Most directors set fundraising goals based on what they raised last year, what a neighboring program raised, or a number that feels ambitious. None of those are a budget.<br><br>
+          School Solutions Global reverses the sequence. We start with what the program actually costs, build a picture of what it would cost if it were fully funded, and set the campaign goal as the gap between those two numbers.<br><br>
+          The fundraiser funds the budget. The budget drives the fundraiser. Every dollar has a job before the campaign opens.
+        </div>
+      </div>
+      <div class="phil-right">
+        <div class="phil-step">
+          <div class="ps-num">1</div>
+          <div><div class="ps-title">Budget Baseline</div><div class="ps-text">What does the program actually cost? District funds, booster funds, all expenses. Mapped clearly, often for the first time.</div></div>
+        </div>
+        <div class="phil-step">
+          <div class="ps-num">2</div>
+          <div><div class="ps-title">Budget of Their Dreams</div><div class="ps-text">What would the program cost if it were fully funded? New uniforms. Full travel budget. Every instrument working. Set the vision.</div></div>
+        </div>
+        <div class="phil-step">
+          <div class="ps-num">3</div>
+          <div><div class="ps-title">Fundraising to Match</div><div class="ps-text">The gap between baseline and dream is the campaign goal. Specific. Defensible. Explainable to students, parents, and donors.</div></div>
+        </div>
+        <div class="phil-step">
+          <div class="ps-num">4</div>
+          <div><div class="ps-title">Every Dollar Has a Job</div><div class="ps-text">Donors give to line items, not a general fund. Uniforms. Travel. Instruments. They see the impact before they give.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-final">
+  <div class="cf-inner">
+    <div class="cf-eyebrow">Ready to get started?</div>
+    <h2 class="cf-title">Book a free<br><em>budget session.</em></h2>
+    <p class="cf-sub">No commitment. No pitch. Just a clear picture of where your program stands &mdash; and what it would take to fully fund it.</p>
+    <div class="cf-actions">
+      <a href="https://meet.brevo.com/charlie-rankin" class="btn-dark">Schedule with Charlie &rarr;</a>
+      <a href="https://app.schoolsolutionsglobal.com" class="btn-white-outline">Explore the Platform</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand-col">
+    <div class="footer-logo-name">School Solutions <em>Global</em></div>
+    <div class="footer-tagline">Every dollar has a job.</div>
+    <div class="footer-powered">Powered by Niknar.ai &middot; CRankin Enterprises, LLC</div>
+  </div>
+  <div>
+    <div class="footer-col-title">Platform</div>
+    <div class="footer-links">
+      <a href="https://app.schoolsolutionsglobal.com" class="footer-link">Sign In</a>
+      <a href="https://musicedtoday.com" class="footer-link">MusicEdToday</a>
+      <a href="https://niknar.ai" class="footer-link">Niknar.ai</a>
+    </div>
+  </div>
+  <div>
+    <div class="footer-col-title">Our Reps</div>
+    <div class="footer-links">
+      <a href="https://floridafundraiser.com" class="footer-link">FloridaFundraiser.com</a>
+      <a href="https://niknar.ai/repbuilder/matt-roper" class="footer-link">Driven Fundraising</a>
+      <a href="https://niknar.ai/repbuilder/steve-hall" class="footer-link">First Coast Fundraising</a>
+    </div>
+  </div>
+  <div>
+    <div class="footer-col-title">Contact</div>
+    <div class="footer-links">
+      <a href="https://meet.brevo.com/charlie-rankin" class="footer-link">Schedule a Call</a>
+      <a href="mailto:charlie@floridafundraiser.com" class="footer-link">charlie@floridafundraiser.com</a>
+    </div>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <div class="fb-copy">&copy; 2026 School Solutions Global &middot; CRankin Enterprises, LLC &middot; All rights reserved</div>
+  <div class="fb-copy">schoolsolutionsglobal.com</div>
+</div>
+
+</body>
+</html>
