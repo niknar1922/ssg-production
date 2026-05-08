@@ -6,7 +6,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>School Solutions Global &mdash; Every Dollar Has a Job</title>
 <meta name="description" content="A connected ecosystem of independent school fundraising professionals. One platform. Every supplier. Every program. Every school.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Guaranteed fallback font stacks */
+body { font-family: 'Outfit', system-ui, -apple-system, sans-serif; }
+.hero-h1, .section-h2, .cf-title, .qb-text, .hiw-title, .nav-name,
+.footer-logo-name, .phil-pull, .rb-item, .dir-title, .rs-name,
+.hs-val, .rss-val, .ps-num { font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif; }
+.nav-link, .section-eyebrow, .hero-eyebrow, .hs-lbl, .stat-lbl,
+.rc-brand, .rc-market, .rc-status, .dir-link, .footer-col-title,
+.footer-link, .footer-powered, .footer-tagline, .fb-copy, .qb-attr,
+.rs-brand, .rs-market, .rss-lbl, .rb-text, .phil-text { font-family: 'DM Mono', 'Courier New', monospace; }
+</style>
 <style>
 :root {
   --ink:      #0d0d0d;
@@ -42,7 +55,7 @@ display:flex;align-items:center;justify-content:space-between;
 .nav-logo{display:flex;align-items:center;gap:10px;}
 .nav-mark{
 width:32px;height:32px;border-radius:7px;
-background:var(–ink);
+background:#0d0d0d;
 display:flex;align-items:center;justify-content:center;
 font-family:‘Instrument Serif’,serif;
 font-size:1rem;font-weight:400;font-style:italic;
@@ -64,11 +77,11 @@ color:var(–muted);text-decoration:none;transition:color 0.15s;
 .nav-cta{
 font-family:‘Outfit’,sans-serif;font-size:0.78rem;font-weight:700;
 padding:8px 18px;border-radius:5px;
-background:var(–ink);color:white;
+background:#0d0d0d;color:white;
 text-decoration:none;border:none;cursor:pointer;
 transition:all 0.15s;
 }
-.nav-cta:hover{background:var(–ink2);transform:translateY(-1px);}
+.nav-cta:hover{background:#2a2a2a;transform:translateY(-1px);}
 
 /* ── HERO ── */
 .hero{
@@ -76,6 +89,7 @@ min-height:92vh;display:flex;flex-direction:column;
 align-items:center;justify-content:center;
 padding:80px 24px 64px;
 text-align:center;position:relative;overflow:hidden;
+background:#faf8f4;
 }
 
 /* Subtle radial glow */
@@ -124,11 +138,11 @@ animation:fadeUp 0.6s ease 0.3s both;
 .btn-ink{
 font-family:‘Outfit’,sans-serif;font-size:0.88rem;font-weight:700;
 padding:13px 26px;border-radius:5px;
-background:var(–ink);color:white;
+background:#0d0d0d;color:white;
 text-decoration:none;border:none;cursor:pointer;
 transition:all 0.2s;display:inline-flex;align-items:center;gap:8px;
 }
-.btn-ink:hover{background:var(–ink2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.15);}
+.btn-ink:hover{background:#2a2a2a;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.15);}
 .btn-outline{
 font-family:‘Outfit’,sans-serif;font-size:0.88rem;font-weight:600;
 padding:12px 26px;border-radius:5px;
@@ -162,7 +176,7 @@ text-transform:uppercase;letter-spacing:0.1em;color:var(–muted);
 
 /* ── QUOTE BREAK ── */
 .quote-break{
-background:var(–ink);
+background:#0d0d0d;
 padding:72px 48px;text-align:center;
 }
 .qb-inner{max-width:760px;margin:0 auto;}
@@ -244,7 +258,7 @@ transition:all 0.15s;
 
 /* Rep showcase card */
 .rep-showcase{
-background:var(–ink);border-radius:12px;
+background:#0d0d0d;border-radius:12px;
 padding:32px;position:relative;overflow:hidden;
 }
 .rep-showcase::before{
@@ -307,7 +321,7 @@ transition:gap 0.15s;
 .dir-link:hover{gap:9px;}
 
 /* ── REPS NETWORK ── */
-.network{background:var(–ink);padding:96px 48px;}
+.network{background:#0d0d0d;padding:96px 48px;}
 .network .section-eyebrow{color:var(–gold);}
 .network .section-eyebrow::before{background:var(–gold);}
 .network .section-h2{color:white;}
@@ -379,7 +393,7 @@ width:28px;text-align:center;margin-top:2px;
 
 /* ── CTA SECTION ── */
 .cta-final{
-background:var(–gold);
+background:#c8943a;
 padding:96px 48px;text-align:center;
 position:relative;overflow:hidden;
 }
@@ -407,11 +421,11 @@ line-height:1.0;margin-bottom:14px;
 .btn-dark{
 font-family:‘Outfit’,sans-serif;font-size:0.88rem;font-weight:700;
 padding:13px 28px;border-radius:5px;
-background:var(–ink);color:white;
+background:#0d0d0d;color:white;
 text-decoration:none;border:none;cursor:pointer;
 transition:all 0.2s;display:inline-flex;align-items:center;gap:8px;
 }
-.btn-dark:hover{background:var(–ink2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.2);}
+.btn-dark:hover{background:#2a2a2a;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.2);}
 .btn-white-outline{
 font-family:‘Outfit’,sans-serif;font-size:0.88rem;font-weight:600;
 padding:12px 28px;border-radius:5px;
@@ -423,7 +437,7 @@ transition:all 0.2s;
 
 /* ── FOOTER ── */
 footer{
-background:var(–ink);padding:48px;
+background:#0d0d0d;padding:48px;
 display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
 gap:40px;
 }
@@ -455,7 +469,7 @@ text-decoration:none;transition:color 0.15s;
 }
 .footer-link:hover{color:white;}
 .footer-bottom{
-background:var(–ink);padding:0 48px 24px;
+background:#0d0d0d;padding:0 48px 24px;
 display:flex;align-items:center;justify-content:space-between;
 border-top:1px solid rgba(255,255,255,0.05);padding-top:20px;
 flex-wrap:wrap;gap:8px;
