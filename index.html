@@ -843,7 +843,7 @@
           <li><a href="#why-ssg">Why SSG</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <a href="https://app.schoolsolutionsglobal.com" class="nav-cta">Rep Login</a>
+        <a href="https://app.schoolsolutionsglobal.com" class="nav-cta">Login</a>
       </div>
     </div>
   </nav>
@@ -1002,16 +1002,142 @@
 
   <!-- CTA -->
   <section class="cta-section" id="contact">
-    <div style="position:relative;z-index:2;">
+    <div style="position:relative;z-index:2; max-width:520px; margin:0 auto;">
       <h2>You got into this <em>to change lives.</em></h2>
-      <p>Let's get started.</p>
-      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:24px;">
-        <a href="mailto:info@schoolsolutionsglobal.com" class="btn-primary">Get Early Access — Schools</a>
-        <a href="mailto:info@schoolsolutionsglobal.com" class="btn-ghost">Partner With Us — Distributors</a>
+      <p style="margin-bottom:32px;">Let's get started.</p>
+
+      <!-- SMS SIGNUP FORM -->
+      <form id="ssg-signup" style="display:flex; flex-direction:column; gap:14px; text-align:left;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+          <input id="ssg-fname" type="text" placeholder="First name" required
+            style="padding:14px 16px; border-radius:8px; border:none; font-size:15px; font-family:inherit; background:rgba(255,255,255,0.12); color:#fff; outline:none; width:100%; box-sizing:border-box;"
+            onfocus="this.style.background='rgba(255,255,255,0.18)'" onblur="this.style.background='rgba(255,255,255,0.12)'"/>
+          <input id="ssg-school" type="text" placeholder="School name" required
+            style="padding:14px 16px; border-radius:8px; border:none; font-size:15px; font-family:inherit; background:rgba(255,255,255,0.12); color:#fff; outline:none; width:100%; box-sizing:border-box;"
+            onfocus="this.style.background='rgba(255,255,255,0.18)'" onblur="this.style.background='rgba(255,255,255,0.12)'"/>
+        </div>
+        <input id="ssg-phone" type="tel" placeholder="Mobile number (e.g. 555-867-5309)" required
+          style="padding:14px 16px; border-radius:8px; border:none; font-size:15px; font-family:inherit; background:rgba(255,255,255,0.12); color:#fff; outline:none; width:100%; box-sizing:border-box;"
+          onfocus="this.style.background='rgba(255,255,255,0.18)'" onblur="this.style.background='rgba(255,255,255,0.12)'"/>
+        <input id="ssg-email" type="email" placeholder="Email (optional)"
+          style="padding:14px 16px; border-radius:8px; border:none; font-size:15px; font-family:inherit; background:rgba(255,255,255,0.12); color:#fff; outline:none; width:100%; box-sizing:border-box;"
+          onfocus="this.style.background='rgba(255,255,255,0.18)'" onblur="this.style.background='rgba(255,255,255,0.12)'"/>
+        <button type="submit" id="ssg-submit" class="btn-primary" style="width:100%; border:none; cursor:pointer; font-size:16px;">
+          Get Early Access to SSG - Teachers
+        </button>
+        <p style="font-size:12px; color:rgba(255,255,255,0.4); margin:0; line-height:1.6;">
+          By submitting, you agree to receive occasional SMS updates from SSG about tools, tips, and early access news. Reply STOP anytime to opt out.
+        </p>
+      </form>
+
+      <!-- SUCCESS STATE -->
+      <div id="ssg-success" style="display:none; padding:32px; background:rgba(255,255,255,0.08); border-radius:12px; text-align:center;">
+        <p style="font-size:22px; font-weight:700; color:#fff; margin:0 0 8px;">You're in.</p>
+        <p style="font-size:15px; color:rgba(255,255,255,0.7); margin:0;">Watch for a text from SSG. We'll be in touch soon.</p>
       </div>
-      <p style="font-size:13px; color:rgba(255,255,255,0.4); margin-top:8px;">info@schoolsolutionsglobal.com</p>
+
+      <div style="margin-top:28px; border-top:1px solid rgba(255,255,255,0.1); padding-top:28px;">
+        <p class="section-eyebrow" style="color:var(--gold); margin-bottom:20px;">For Distributors</p>
+
+        <!-- DISTRIBUTOR SIGNUP FORM -->
+        <form id="dist-signup" style="display:flex; flex-direction:column; gap:14px; text-align:left;">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+            <input id="dist-fname" type="text" placeholder="First name" required
+              style="padding:14px 16px; border-radius:8px; border:none; font-size:15px; font-family:inherit; background:rgba(255,255,255,0.12); color:#fff; outline:none; width:100%; box-sizing:border-box;"
+              onfocus="this.style.background='rgba(255,255,255,0.18)'" onblur="this.style.background='rgba(255,255,255,0.12)'"/>
+            <input id="dist-company" type="text" placeholder="Company name" required
+              style="padding:14px 16px; border-radius:8px; border:none; font-size:15px; font-family:inherit; background:rgba(255,255,255,0.12); color:#fff; outline:none; width:100%; box-sizing:border-box;"
+              onfocus="this.style.background='rgba(255,255,255,0.18)'" onblur="this.style.background='rgba(255,255,255,0.12)'"/>
+          </div>
+          <input id="dist-phone" type="tel" placeholder="Mobile number (e.g. 555-867-5309)" required
+            style="padding:14px 16px; border-radius:8px; border:none; font-size:15px; font-family:inherit; background:rgba(255,255,255,0.12); color:#fff; outline:none; width:100%; box-sizing:border-box;"
+            onfocus="this.style.background='rgba(255,255,255,0.18)'" onblur="this.style.background='rgba(255,255,255,0.12)'"/>
+          <input id="dist-email" type="email" placeholder="Email (optional)"
+            style="padding:14px 16px; border-radius:8px; border:none; font-size:15px; font-family:inherit; background:rgba(255,255,255,0.12); color:#fff; outline:none; width:100%; box-sizing:border-box;"
+            onfocus="this.style.background='rgba(255,255,255,0.18)'" onblur="this.style.background='rgba(255,255,255,0.12)'"/>
+          <button type="submit" id="dist-submit" style="width:100%; border:none; cursor:pointer; font-size:16px; padding:16px 32px; border-radius:8px; font-weight:700; background:transparent; color:var(--gold); border:2px solid var(--gold); font-family:inherit; transition:background 0.2s, color 0.2s;"
+            onmouseover="this.style.background='var(--gold)';this.style.color='var(--navy)'"
+            onmouseout="this.style.background='transparent';this.style.color='var(--gold)'">
+            Partner With Us — Distributors
+          </button>
+          <p style="font-size:12px; color:rgba(255,255,255,0.4); margin:0; line-height:1.6;">
+            By submitting, you agree to receive occasional SMS updates from SSG. Reply STOP anytime to opt out.
+          </p>
+        </form>
+
+        <!-- DISTRIBUTOR SUCCESS STATE -->
+        <div id="dist-success" style="display:none; padding:32px; background:rgba(255,255,255,0.08); border-radius:12px; text-align:center;">
+          <p style="font-size:22px; font-weight:700; color:#fff; margin:0 0 8px;">You're in.</p>
+          <p style="font-size:15px; color:rgba(255,255,255,0.7); margin:0;">We'll be in touch about partnering with SSG.</p>
+        </div>
+      </div>
+
+      <p style="font-size:13px; color:rgba(255,255,255,0.4); margin-top:24px;">info@schoolsolutionsglobal.com</p>
     </div>
   </section>
+
+  <script>
+  (function() {
+    var N8N_WEBHOOK_URL = 'https://crankinent.app.n8n.cloud/webhook/ssg-intake';
+
+    function postToN8n(data, formEl, successEl, btn, originalLabel) {
+      fetch(N8N_WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+      .then(function(res) {
+        if (res.ok) {
+          formEl.style.display = 'none';
+          successEl.style.display = 'block';
+        } else {
+          throw new Error('Server error');
+        }
+      })
+      .catch(function() {
+        btn.textContent = originalLabel;
+        btn.disabled = false;
+        alert('Something went wrong — please try again or email info@schoolsolutionsglobal.com');
+      });
+    }
+
+    // TEACHER FORM
+    document.getElementById('ssg-signup').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var btn = document.getElementById('ssg-submit');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      postToN8n({
+        type:        'Teacher',
+        firstName:   document.getElementById('ssg-fname').value.trim(),
+        schoolName:  document.getElementById('ssg-school').value.trim(),
+        mobile:      document.getElementById('ssg-phone').value.trim(),
+        email:       document.getElementById('ssg-email').value.trim()
+      },
+      document.getElementById('ssg-signup'),
+      document.getElementById('ssg-success'),
+      btn, 'Get Early Access to SSG - Teachers');
+    });
+
+    // DISTRIBUTOR FORM
+    document.getElementById('dist-signup').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var btn = document.getElementById('dist-submit');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      postToN8n({
+        type:        'Distributor',
+        firstName:   document.getElementById('dist-fname').value.trim(),
+        company:     document.getElementById('dist-company').value.trim(),
+        mobile:      document.getElementById('dist-phone').value.trim(),
+        email:       document.getElementById('dist-email').value.trim()
+      },
+      document.getElementById('dist-signup'),
+      document.getElementById('dist-success'),
+      btn, 'Partner With Us — Distributors');
+    });
+  })();
+  </script>
 
   <!-- FOOTER -->
   <footer>
@@ -1024,7 +1150,7 @@
         <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="#why-ssg">Why SSG</a></li>
         <li><a href="mailto:info@schoolsolutionsglobal.com">Contact</a></li>
-        <li><a href="https://app.schoolsolutionsglobal.com">Rep Login</a></li>
+        <li><a href="https://app.schoolsolutionsglobal.com">Login</a></li>
       </ul>
     </div>
   </footer>
