@@ -725,72 +725,102 @@
       .flywheel-arrow { transform: rotate(90deg); padding: 8px 0; align-self: auto; }
     }
 
-    /* ── INSTANT QUOTE CALLOUT ───────────────────────────── */
-    .quote-callout {
+    /* ── APPAREL TOOLS ───────────────────────────────────── */
+    .tools-section {
       background: var(--navy);
       padding: 80px 24px;
     }
-    .quote-callout-inner {
-      max-width: 960px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 64px;
-    }
-    .quote-callout-text {
-      flex: 1;
-    }
-    .quote-callout-action {
-      flex-shrink: 0;
+    .tools-eyebrow {
       text-align: center;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .tools-heading {
+      text-align: center;
+      color: #fff;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .tools-sub {
+      text-align: center;
+      color: rgba(255,255,255,0.6);
+      font-size: 1rem;
+      margin-bottom: 48px;
+    }
+    .tools-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .tool-card {
       background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.12);
       border-radius: 16px;
-      padding: 36px 40px;
-      min-width: 240px;
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
     }
-    .quote-stat {
-      font-size: 3rem;
+    .tool-card-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+    .tool-card-title {
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .tool-card-stat {
+      font-size: 2.4rem;
       font-weight: 800;
       color: var(--gold);
       line-height: 1;
       letter-spacing: -1px;
+      margin-bottom: 4px;
     }
-    .quote-stat-label {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.6);
-      margin-top: 4px;
-      margin-bottom: 28px;
+    .tool-card-stat-label {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.5);
       text-transform: uppercase;
       letter-spacing: 0.06em;
+      margin-bottom: 16px;
     }
-    .quote-btn {
+    .tool-card-body {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.95rem;
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 28px;
+    }
+    .tool-card-btn {
       display: block;
+      text-align: center;
       background: var(--gold);
       color: var(--navy);
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       text-decoration: none;
-      padding: 14px 24px;
+      padding: 13px 20px;
       border-radius: 8px;
       transition: opacity 0.2s;
     }
-    .quote-btn:hover { opacity: 0.88; }
-    .quote-disclaimer {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.4);
-      margin-top: 12px;
+    .tool-card-btn:hover { opacity: 0.88; }
+    .tool-card-disclaimer {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.35);
+      text-align: center;
+      margin-top: 10px;
       margin-bottom: 0;
     }
-    @media (max-width: 700px) {
-      .quote-callout-inner {
-        flex-direction: column;
-        gap: 40px;
-      }
-      .quote-callout-action {
-        width: 100%;
-        min-width: 0;
-      }
+    @media (max-width: 640px) {
+      .tools-grid { grid-template-columns: 1fr; }
     }
 
     /* ── CTA SECTION ────────────────────────────────────── */
@@ -952,20 +982,33 @@
     </div>
   </section>
 
-  <!-- INSTANT QUOTE CALLOUT -->
-  <section class="quote-callout">
-    <div class="quote-callout-inner">
-      <div class="quote-callout-text">
-        <div class="eyebrow" style="color:var(--gold);margin-bottom:12px;">Time Saving Tool</div>
-        <h2 style="color:#fff;margin-bottom:16px;">Know your numbers <em style="color:var(--gold);font-style:normal;">before</em> you commit.</h2>
-        <p style="color:rgba(255,255,255,0.82);font-size:1.08rem;line-height:1.7;margin-bottom:0;">Apparel orders can feel like a guessing game — until now. Browse a catalog of over <strong style="color:#fff;">5,000 garments</strong> from top brands and get an instant ballpark on what your order might cost. No forms. No sales calls. Just a real number you can actually plan around.</p>
+  <!-- APPAREL TOOLS -->
+  <section class="tools-section">
+    <p class="tools-eyebrow">Free Apparel Tools</p>
+    <h2 class="tools-heading">Stop guessing. Start knowing.</h2>
+    <p class="tools-sub">Two free tools that make apparel ordering faster and less stressful.</p>
+    <div class="tools-grid">
+
+      <div class="tool-card">
+        <div class="tool-card-icon">🏷️</div>
+        <div class="tool-card-title">Instant Apparel Quote</div>
+        <div class="tool-card-stat">5,000+</div>
+        <div class="tool-card-stat-label">garments from top brands</div>
+        <p class="tool-card-body">Apparel orders can feel like a guessing game — until now. Browse a full catalog and get an instant ballpark on what your order might cost. No forms. No sales calls. Just a real number you can actually plan around.</p>
+        <a href="https://schoolsolutionsglobal.com/quote/" target="_blank" class="tool-card-btn">Get an Instant Quote →</a>
+        <p class="tool-card-disclaimer">No account needed. No commitment.</p>
       </div>
-      <div class="quote-callout-action">
-        <div class="quote-stat">5,000+</div>
-        <div class="quote-stat-label">garments from top brands</div>
-        <a href="https://schoolsolutionsglobal.com/quote/" target="_blank" class="quote-btn">Get an Instant Quote →</a>
-        <p class="quote-disclaimer">No account needed. No commitment.</p>
+
+      <div class="tool-card">
+        <div class="tool-card-icon">📐</div>
+        <div class="tool-card-title">Apparel Placement Guide</div>
+        <div class="tool-card-stat">One</div>
+        <div class="tool-card-stat-label">less thing to figure out</div>
+        <p class="tool-card-body">Not sure where the logo goes? Left chest, full back, sleeve? The placement guide takes the guesswork out of design decisions — so you can hand off a clear brief and get exactly what you pictured.</p>
+        <a href="https://schoolsolutionsglobal.com/placementguide/" target="_blank" class="tool-card-btn">View the Placement Guide →</a>
+        <p class="tool-card-disclaimer">Free resource. No sign-in required.</p>
       </div>
+
     </div>
   </section>
 
