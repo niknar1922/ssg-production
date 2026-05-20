@@ -725,6 +725,74 @@
       .flywheel-arrow { transform: rotate(90deg); padding: 8px 0; align-self: auto; }
     }
 
+    /* ── INSTANT QUOTE CALLOUT ───────────────────────────── */
+    .quote-callout {
+      background: var(--navy);
+      padding: 80px 24px;
+    }
+    .quote-callout-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 64px;
+    }
+    .quote-callout-text {
+      flex: 1;
+    }
+    .quote-callout-action {
+      flex-shrink: 0;
+      text-align: center;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 36px 40px;
+      min-width: 240px;
+    }
+    .quote-stat {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+    .quote-stat-label {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      margin-top: 4px;
+      margin-bottom: 28px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .quote-btn {
+      display: block;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 8px;
+      transition: opacity 0.2s;
+    }
+    .quote-btn:hover { opacity: 0.88; }
+    .quote-disclaimer {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+      margin-top: 12px;
+      margin-bottom: 0;
+    }
+    @media (max-width: 700px) {
+      .quote-callout-inner {
+        flex-direction: column;
+        gap: 40px;
+      }
+      .quote-callout-action {
+        width: 100%;
+        min-width: 0;
+      }
+    }
+
     /* ── CTA SECTION ────────────────────────────────────── */
     .cta-section {
       background: var(--navy);
@@ -841,6 +909,7 @@
         <ul>
           <li><a href="#how-it-works">How It Works</a></li>
           <li><a href="#why-ssg">Why SSG</a></li>
+          <li><a href="https://schoolsolutionsglobal.com/quote/" target="_blank">Instant Quote</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <a href="https://app.schoolsolutionsglobal.com" class="nav-cta">Login</a>
@@ -853,7 +922,7 @@
     <div class="hero-eyebrow">School Solutions Global</div>
     <h1>The right solution.<br/><em>Right when you need it.</em></h1>
     <p class="hero-sub">
-      Every hero has a sidekick, a helper. School Solutions Global is yours — always on call, ready to ace the next fundraiser, tackle the next apparel order, and make your planning period about planning again.
+      Every hero has a sidekick, a helper. School Solutions Global is yours — always on call, ready to help you ace your next fundraiser, tackle your next apparel order, and make your planning period about planning again.
     </p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Get Early Access</a>
@@ -883,6 +952,22 @@
     </div>
   </section>
 
+  <!-- INSTANT QUOTE CALLOUT -->
+  <section class="quote-callout">
+    <div class="quote-callout-inner">
+      <div class="quote-callout-text">
+        <div class="eyebrow" style="color:var(--gold);margin-bottom:12px;">Time Saving Tool</div>
+        <h2 style="color:#fff;margin-bottom:16px;">Know your numbers <em style="color:var(--gold);font-style:normal;">before</em> you commit.</h2>
+        <p style="color:rgba(255,255,255,0.82);font-size:1.08rem;line-height:1.7;margin-bottom:0;">Apparel orders can feel like a guessing game — until now. Browse a catalog of over <strong style="color:#fff;">5,000 garments</strong> from top brands and get an instant ballpark on what your order might cost. No forms. No sales calls. Just a real number you can actually plan around.</p>
+      </div>
+      <div class="quote-callout-action">
+        <div class="quote-stat">5,000+</div>
+        <div class="quote-stat-label">garments from top brands</div>
+        <a href="https://schoolsolutionsglobal.com/quote/" target="_blank" class="quote-btn">Get an Instant Quote →</a>
+        <p class="quote-disclaimer">No account needed. No commitment.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- WHY SSG -->
   <section class="why" id="why-ssg">
@@ -1149,6 +1234,7 @@
       <ul class="footer-links">
         <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="#why-ssg">Why SSG</a></li>
+        <li><a href="https://schoolsolutionsglobal.com/quote/" target="_blank">Instant Quote</a></li>
         <li><a href="mailto:info@schoolsolutionsglobal.com">Contact</a></li>
         <li><a href="https://app.schoolsolutionsglobal.com">Login</a></li>
       </ul>
