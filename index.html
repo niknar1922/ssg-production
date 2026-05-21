@@ -625,6 +625,104 @@
       vertical-align: middle;
     }
 
+    /* ── GOOGLE INTEGRATION ─────────────────────────────── */
+    .google-section {
+      background: #fff;
+      padding: 88px 24px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .google-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 72px;
+    }
+    .google-text { flex: 1; }
+    .google-text .section-eyebrow { margin-bottom: 12px; }
+    .google-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .google-body {
+      font-size: 1.05rem;
+      color: var(--slate);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .google-kicker {
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      background: var(--gold-light);
+      border-left: 4px solid var(--gold);
+      padding: 10px 16px;
+      border-radius: 4px;
+    }
+    .google-apps {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      min-width: 260px;
+    }
+    .google-app-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      transition: box-shadow 0.2s;
+    }
+    .google-app-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+    .google-app-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .google-app-icon.sheets  { background: #e6f4ea; }
+    .google-app-icon.cal     { background: #fce8e6; }
+    .google-app-icon.drive   { background: #e8f0fe; }
+    .google-app-info { flex: 1; }
+    .google-app-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--navy);
+    }
+    .google-app-desc {
+      font-size: 0.8rem;
+      color: var(--slate);
+      margin-top: 2px;
+    }
+    .google-app-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      background: #dcfce7;
+      color: #16a34a;
+      padding: 3px 8px;
+      border-radius: 99px;
+      flex-shrink: 0;
+    }
+    @media (max-width: 720px) {
+      .google-inner {
+        flex-direction: column;
+        gap: 40px;
+      }
+      .google-apps { min-width: 0; width: 100%; }
+    }
+
     /* ── FLYWHEEL ────────────────────────────────────────── */
     .flywheel {
       background: var(--navy);
@@ -1106,6 +1204,75 @@
 
       </div>
       <div class="flywheel-loop">When teachers save time, everyone wins</div>
+    </div>
+  </section>
+
+  <!-- GOOGLE INTEGRATION -->
+  <section class="google-section">
+    <div class="google-inner">
+      <div class="google-text">
+        <p class="section-eyebrow">No Rip &amp; Replace</p>
+        <h2 class="google-title">Stop patching.<br/>Start connecting.</h2>
+        <p class="google-body">If you've ever copy-pasted a spreadsheet into a form, exported a CSV into a calendar, or sent the same update three different ways just to run one fundraiser — you know the tax. Teachers do it. Independent fundraising consultants do it. And every workaround costs time nobody had to spare.</p>
+        <p class="google-body" style="margin-bottom:20px;">SSG doesn't ask you to start over. It wraps around Google Sheets, Google Calendar, and Google Drive — the tools you already live in — and gives you a real dashboard on top. One place. Everything connected. Your data still in your Google account where it belongs.</p>
+        <span class="google-kicker">You'll make Excel jealous. 😏</span>
+      </div>
+      <div class="google-apps">
+        <div class="google-app-card">
+          <div class="google-app-icon sheets">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="26" height="26">
+              <path fill="#43A047" d="M37 45H11c-1.657 0-3-1.343-3-3V6c0-1.657 1.343-3 3-3h19l10 10v29c0 1.657-1.343 3-3 3z"/>
+              <path fill="#C8E6C9" d="M40 13H30V3l10 10z"/>
+              <path fill="#2E7D32" d="M30 3l10 10H30V3z"/>
+              <path fill="white" d="M32 24H16v-2h16v2zm0 4H16v-2h16v2zm0 4H16v-2h16v2zm-4 4H16v-2h12v2z"/>
+            </svg>
+          </div>
+          <div class="google-app-info">
+            <div class="google-app-name">Google Sheets</div>
+            <div class="google-app-desc">Your data. Your rows. Always yours.</div>
+          </div>
+          <span class="google-app-badge">Connected</span>
+        </div>
+        <div class="google-app-card">
+          <div class="google-app-icon cal">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="26" height="26">
+              <rect width="36" height="36" x="6" y="6" fill="#fff" rx="3"/>
+              <path fill="#EA4335" d="M6 9a3 3 0 0 1 3-3h30a3 3 0 0 1 3 3v7H6V9z"/>
+              <path fill="#1E88E5" d="M6 16h36v23a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V16z"/>
+              <circle cx="17" cy="7" r="2.5" fill="#B71C1C"/>
+              <circle cx="31" cy="7" r="2.5" fill="#B71C1C"/>
+              <rect width="4" height="4" x="15" y="22" fill="#fff" rx="1"/>
+              <rect width="4" height="4" x="22" y="22" fill="#fff" rx="1"/>
+              <rect width="4" height="4" x="29" y="22" fill="#fff" rx="1"/>
+              <rect width="4" height="4" x="15" y="29" fill="#fff" rx="1"/>
+              <rect width="4" height="4" x="22" y="29" fill="#fff" rx="1"/>
+            </svg>
+          </div>
+          <div class="google-app-info">
+            <div class="google-app-name">Google Calendar</div>
+            <div class="google-app-desc">Your SSG Calendar syncs right in.</div>
+          </div>
+          <span class="google-app-badge">Connected</span>
+        </div>
+        <div class="google-app-card">
+          <div class="google-app-icon drive">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.3 78" width="30" height="26">
+              <path d="M6.6 66.85l3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3L27.5 53H0c0 1.55.4 3.1 1.2 4.5z" fill="#0066DA"/>
+              <path d="M43.65 25L29.9 1.2C28.55 2 27.4 3.1 26.6 4.5L1.2 48.5A9.06 9.06 0 000 53h27.5z" fill="#00AC47"/>
+              <path d="M73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5H59.8l5.85 11.5z" fill="#EA4335"/>
+              <path d="M43.65 25l13.75-23.8C56.05.4 54.5 0 52.9 0H34.4c-1.6 0-3.15.45-4.5 1.2z" fill="#00832D"/>
+              <path d="M59.8 53H27.5L13.75 76.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z" fill="#2684FC"/>
+              <path d="M73.4 26.5l-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3L43.65 25l16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z" fill="#FFBA00"/>
+            </svg>
+          </div>
+          <div class="google-app-info">
+            <div class="google-app-name">Google Drive</div>
+            <div class="google-app-desc">Docs, forms, files — all in place.</div>
+          </div>
+          <span class="google-app-badge">Connected</span>
+        </div>
+        <p style="text-align:center; font-size:0.78rem; color:var(--slate); margin-top:4px;">Google Sheets, Google Calendar, and Google Drive are trademarks of Google LLC.</p>
+      </div>
     </div>
   </section>
 
