@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Goals ÷ Time = Tension</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+–ink: #1a1714;
+–muted: #6b6460;
+–accent: #c0392b;
+–cream: #faf7f2;
+–rule: #e0d8cf;
+–formula-bg: #1a1714;
+–formula-text: #faf7f2;
+}
+
+html { font-size: 18px; }
+
+body {
+background: var(–cream);
+color: var(–ink);
+font-family: ‘Source Serif 4’, Georgia, serif;
+font-weight: 300;
+line-height: 1.8;
+padding: 0;
+}
+
+/* Header */
+.post-header {
+max-width: 700px;
+margin: 0 auto;
+padding: 80px 24px 40px;
+border-bottom: 1px solid var(–rule);
+}
+
+.post-category {
+font-family: ‘Source Serif 4’, serif;
+font-size: 0.65rem;
+font-weight: 400;
+letter-spacing: 0.25em;
+text-transform: uppercase;
+color: var(–accent);
+margin-bottom: 24px;
+}
+
+h1 {
+font-family: ‘Playfair Display’, Georgia, serif;
+font-size: clamp(2.4rem, 6vw, 3.6rem);
+font-weight: 700;
+line-height: 1.1;
+letter-spacing: -0.02em;
+color: var(–ink);
+margin-bottom: 28px;
+}
+
+.post-meta {
+font-size: 0.78rem;
+color: var(–muted);
+letter-spacing: 0.05em;
+}
+
+/* Formula hero */
+.formula-block {
+background: var(–formula-bg);
+color: var(–formula-text);
+text-align: center;
+padding: 60px 24px;
+margin: 0;
+}
+
+.formula-block .eq {
+font-family: ‘Playfair Display’, serif;
+font-size: clamp(2rem, 8vw, 4.5rem);
+font-weight: 700;
+letter-spacing: -0.01em;
+line-height: 1;
+}
+
+.formula-block .eq .divider {
+display: inline-block;
+margin: 0 0.2em;
+color: var(–accent);
+font-style: italic;
+}
+
+.formula-block .eq .equals {
+margin: 0 0.25em;
+color: #888;
+}
+
+.formula-block .tagline {
+margin-top: 18px;
+font-size: 0.8rem;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: #999;
+}
+
+/* Body */
+.post-body {
+max-width: 700px;
+margin: 0 auto;
+padding: 56px 24px 80px;
+}
+
+p {
+margin-bottom: 1.5rem;
+}
+
+/* Section headings */
+h2 {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.5rem;
+font-weight: 700;
+letter-spacing: -0.01em;
+color: var(–ink);
+margin: 3rem 0 1rem;
+padding-top: 2rem;
+border-top: 1px solid var(–rule);
+}
+
+/* Pull quote */
+blockquote {
+border-left: 3px solid var(–accent);
+margin: 2.5rem 0;
+padding: 0.5rem 0 0.5rem 1.8rem;
+font-family: ‘Playfair Display’, serif;
+font-style: italic;
+font-size: 1.25rem;
+line-height: 1.5;
+color: var(–ink);
+}
+
+/* Goal lists */
+.goal-list {
+list-style: none;
+margin: 1.5rem 0 1.5rem 0;
+padding: 0;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 0.5rem 2rem;
+}
+
+@media (max-width: 540px) {
+.goal-list { grid-template-columns: 1fr; }
+}
+
+.goal-list li {
+font-size: 0.92rem;
+color: var(–muted);
+padding-left: 1.2rem;
+position: relative;
+}
+
+.goal-list li::before {
+content: ‘—’;
+position: absolute;
+left: 0;
+color: var(–accent);
+font-weight: 700;
+}
+
+/* Two solutions */
+.solution-box {
+background: white;
+border: 1px solid var(–rule);
+border-radius: 2px;
+padding: 28px 32px;
+margin: 2rem 0;
+}
+
+.solution-box .solution-label {
+font-family: ‘Source Serif 4’, serif;
+font-size: 0.65rem;
+font-weight: 400;
+letter-spacing: 0.25em;
+text-transform: uppercase;
+color: var(–accent);
+margin-bottom: 8px;
+}
+
+.solution-box h3 {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.2rem;
+font-weight: 700;
+margin-bottom: 12px;
+}
+
+.solution-box ul {
+list-style: none;
+padding: 0;
+}
+
+.solution-box ul li {
+font-size: 0.92rem;
+color: var(–muted);
+padding: 3px 0 3px 1.2rem;
+position: relative;
+}
+
+.solution-box ul li::before {
+content: ‘→’;
+position: absolute;
+left: 0;
+color: var(–accent);
+}
+
+/* Bow & Arrow visual */
+.bow-visual {
+text-align: center;
+margin: 3rem 0;
+padding: 40px 24px;
+background: white;
+border: 1px solid var(–rule);
+}
+
+.bow-visual svg {
+width: min(320px, 100%);
+height: auto;
+}
+
+.bow-visual .caption {
+margin-top: 16px;
+font-size: 0.78rem;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: var(–muted);
+}
+
+/* Closing question */
+.closing-box {
+background: var(–ink);
+color: var(–cream);
+padding: 48px 40px;
+margin: 3.5rem 0 0;
+text-align: center;
+}
+
+.closing-box .q-label {
+font-size: 0.65rem;
+letter-spacing: 0.25em;
+text-transform: uppercase;
+color: var(–accent);
+margin-bottom: 16px;
+}
+
+.closing-box p {
+font-family: ‘Playfair Display’, serif;
+font-style: italic;
+font-size: 1.2rem;
+line-height: 1.55;
+margin-bottom: 0;
+color: #f0ebe4;
+}
+
+/* Footer rule */
+.post-footer {
+max-width: 700px;
+margin: 0 auto;
+padding: 40px 24px 80px;
+border-top: 1px solid var(–rule);
+font-size: 0.78rem;
+color: var(–muted);
+letter-spacing: 0.04em;
+}
+
+/* Animations */
+@keyframes fadeUp {
+from { opacity: 0; transform: translateY(18px); }
+to   { opacity: 1; transform: translateY(0); }
+}
+
+.post-header, .formula-block, .post-body {
+animation: fadeUp 0.7s ease both;
+}
+.formula-block { animation-delay: 0.15s; }
+.post-body     { animation-delay: 0.25s; }
+</style>
+
+</head>
+<body>
+
+<header class="post-header">
+  <p class="post-category">CEO Mindset &nbsp;·&nbsp; Leadership</p>
+  <h1>Goals ÷ Time&nbsp;=&nbsp;Tension</h1>
+  <p class="post-meta">A life formula for anyone carrying too many backpacks</p>
+</header>
+
+<div class="formula-block" aria-label="Formula: Goals divided by Time equals Tension">
+  <div class="eq">
+    Goals <span class="divider">÷</span> Time <span class="equals">=</span> Tension
+  </div>
+  <p class="tagline">Not a scientific formula. A life formula.</p>
+</div>
+
+<article class="post-body">
+
+  <p>Most people think stress comes from working hard.</p>
+  <p>I don't think that's true.</p>
+  <p>I've met people who work incredibly hard and seem energized by it. I've also met people carrying far less responsibility who are completely overwhelmed.</p>
+
+  <blockquote>The more goals you try to accomplish in a fixed amount of time, the greater the tension becomes.</blockquote>
+
+  <h2>The Trap of Ambition</h2>
+
+  <p>When I was a young band director, I had big dreams.</p>
+
+  <ul class="goal-list">
+    <li>Superior ratings</li>
+    <li>A larger band</li>
+    <li>More Solo &amp; Ensemble students</li>
+    <li>An award-winning jazz band</li>
+    <li>Every student to succeed</li>
+    <li>More beginners recruited</li>
+    <li>More money raised</li>
+    <li>Every instrument fixed</li>
+  </ul>
+
+  <p>None of those goals were bad. In fact, most were noble.</p>
+  <p>The problem wasn't the goals. <strong>The problem was the denominator.</strong></p>
+  <p>There were only so many hours in the day. The numerator kept growing while the denominator stayed the same. Eventually, the tension became impossible to ignore.</p>
+
+  <h2>The Same Problem in Business</h2>
+
+  <p>Years later, I discovered that leaving education didn't magically solve the problem. The formula followed me.</p>
+  <p>Today I can easily find myself pursuing fundraising growth, apparel sales, software development, marketing campaigns, new partnerships, AI tools, speaking opportunities, writing projects, and family commitments — all at once.</p>
+  <p>Again, none of these are bad goals. But every goal adds weight. Every opportunity becomes another backpack to carry. At some point, the issue isn't whether the opportunity is good — it's whether there is enough time to support it.</p>
+
+  <h2>Two Ways to Reduce Tension</h2>
+
+  <p>Most people try to solve tension by working harder. But the formula suggests there are really only two solutions.</p>
+
+  <div class="solution-box">
+    <p class="solution-label">Solution One</p>
+    <h3>Increase the Denominator — create more usable time</h3>
+    <ul>
+      <li>Delegation</li>
+      <li>Automation</li>
+      <li>Hiring help</li>
+      <li>Extending deadlines</li>
+      <li>Improving systems</li>
+      <li>Saying "not yet"</li>
+    </ul>
+  </div>
+
+  <p>Notice I didn't say "work longer hours." Working longer hours eventually reaches a limit. <strong>Systems scale better than exhaustion.</strong></p>
+
+  <div class="solution-box">
+    <p class="solution-label">Solution Two</p>
+    <h3>Reduce the Numerator — choose fewer goals</h3>
+    <ul>
+      <li>Every goal feels important — choose anyway</li>
+      <li>Every opportunity looks promising — filter anyway</li>
+      <li>Every project has potential — subtract anyway</li>
+    </ul>
+  </div>
+
+  <p>Maturity often looks less like adding and more like subtracting. The most successful people I've met are not always the smartest or most talented. They are often the most disciplined about what they choose <em>not</em> to pursue.</p>
+
+  <h2>The Bow and Arrow</h2>
+
+  <div class="bow-visual">
+    <!-- Simple SVG bow & arrow illustration -->
+    <svg viewBox="0 0 320 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bow and arrow diagram showing balanced tension">
+      <!-- Bow arc -->
+      <path d="M40 10 Q10 60 40 110" stroke="#1a1714" stroke-width="5" stroke-linecap="round" fill="none"/>
+      <!-- Bowstring -->
+      <line x1="40" y1="10" x2="40" y2="110" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <!-- Arrow shaft -->
+      <line x1="44" y1="60" x2="270" y2="60" stroke="#1a1714" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- Arrowhead -->
+      <polygon points="280,60 265,53 265,67" fill="#1a1714"/>
+      <!-- Fletching -->
+      <path d="M52,60 L44,52 M52,60 L44,68" stroke="#c0392b" stroke-width="2" stroke-linecap="round"/>
+      <!-- Labels -->
+      <text x="14" y="64" font-family="Georgia, serif" font-style="italic" font-size="9" fill="#6b6460">Goals</text>
+      <text x="52" y="55" font-family="Georgia, serif" font-size="8" fill="#6b6460">Time</text>
+      <text x="240" y="55" font-family="Georgia, serif" font-style="italic" font-size="9" fill="#c0392b">Forward</text>
+    </svg>
+    <p class="caption">Balance goals and time — the arrow flies</p>
+  </div>
+
+  <p>The bow represents your goals. The string represents time.</p>
+  <p>If the string is too short, the tension becomes overwhelming and something breaks. If the string is too loose, there isn't enough tension to move anything forward. But when goals and time are balanced correctly, <strong>the arrow flies.</strong></p>
+
+  <blockquote>The objective isn't to eliminate tension. It's to create the right amount of tension — enough to move forward, not so much that you snap.</blockquote>
+
+  <div class="closing-box">
+    <p class="q-label">Today's Question</p>
+    <p>Is the problem really the goal — or have I simply run out of denominator?</p>
+  </div>
+
+  <p style="margin-top: 2.5rem;">Sometimes the answer is to create more time. Sometimes the answer is to let go of a goal. Both require courage.</p>
+
+  <p>Life becomes much more manageable when we stop measuring ourselves by how many goals we can collect and start measuring ourselves by how intentionally we invest our time.</p>
+
+  <p><strong>Because in the end, every goal costs time. And time is the one resource we never get back.</strong></p>
+
+</article>
+
+<footer class="post-footer">
+  <p>Filed under: CEO Mindset &nbsp;·&nbsp; Time &amp; Productivity &nbsp;·&nbsp; Leadership</p>
+</footer>
+
+</body>
+</html>
