@@ -1,1132 +1,843 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Promotional Products for Schools — School Solutions Global</title>
-    <meta
-      name="description"
-      content="Spirit wear, field-day prizes, teacher gifts, lanyards, drinkware and more — school-friendly pricing, low minimums, fast turnaround."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Promotional Products for Schools — School Solutions Global</title>
+  <meta name="description" content="Spirit wear, field-day prizes, teacher gifts, lanyards, drinkware and more — school-friendly pricing, low minimums, fast turnaround." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-      :root {
-        --navy: #0f1f3d;
-        --navy-light: #162848;
-        --gold: #e8a020;
-        --gold-light: #fdf4e3;
-        --gold-border: rgba(232, 160, 32, 0.35);
-        --slate: #64748b;
-        --border: #e2e8f0;
-        --bg: #ffffff;
-        --bg-soft: #f8fafc;
-        --text: #1e293b;
-        --radius: 12px;
-        --max: 1140px;
-      }
+    :root {
+      --navy:       #0f1f3d;
+      --navy-light: #162848;
+      --gold:       #e8a020;
+      --gold-light: #fdf4e3;
+      --gold-border: rgba(232,160,32,0.35);
+      --slate:      #64748b;
+      --border:     #e2e8f0;
+      --bg:         #ffffff;
+      --bg-soft:    #f8fafc;
+      --text:       #1e293b;
+      --radius:     12px;
+      --max:        1140px;
+    }
 
-      html {
-        scroll-behavior: smooth;
-      }
+    html { scroll-behavior: smooth; }
 
-      body {
-        font-family: "Inter", system-ui, sans-serif;
-        color: var(--text);
-        background: var(--bg);
-        line-height: 1.6;
-        -webkit-font-smoothing: antialiased;
-      }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
 
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
+    a { color: inherit; text-decoration: none; }
 
-      /* ── NAV ───────────────────────────────────────────── */
-      nav {
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(8px);
-        border-bottom: 1px solid var(--border);
-      }
-      .nav-inner {
-        max-width: var(--max);
-        margin: 0 auto;
-        padding: 0 24px;
-        height: 64px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .logo {
-        font-size: 15px;
-        font-weight: 700;
-        color: var(--navy);
-        letter-spacing: -0.01em;
-      }
-      .logo span {
-        color: var(--gold);
-      }
-      nav ul {
-        list-style: none;
-        display: flex;
-        gap: 32px;
-      }
-      nav a {
-        font-size: 14px;
-        font-weight: 500;
-        color: var(--slate);
-        transition: color 0.15s;
-      }
-      nav a:hover {
-        color: var(--navy);
-      }
-      .nav-cta {
-        background: var(--navy);
-        color: #fff !important;
-        padding: 8px 20px;
-        border-radius: 8px;
-        font-size: 13px !important;
-        font-weight: 600 !important;
-        transition: background 0.15s !important;
-      }
-      .nav-cta:hover {
-        background: var(--navy-light) !important;
-      }
-      .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 24px;
-      }
+    /* ── NAV ───────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo { font-size: 15px; font-weight: 700; color: var(--navy); letter-spacing: -0.01em; }
+    .logo span { color: var(--gold); }
+    nav ul { list-style: none; display: flex; gap: 32px; }
+    nav a { font-size: 14px; font-weight: 500; color: var(--slate); transition: color 0.15s; }
+    nav a:hover { color: var(--navy); }
+    .nav-cta {
+      background: var(--navy); color: #fff !important;
+      padding: 8px 20px; border-radius: 8px;
+      font-size: 13px !important; font-weight: 600 !important;
+      transition: background 0.15s !important;
+    }
+    .nav-cta:hover { background: var(--navy-light) !important; }
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    @media (max-width: 640px) {
+      nav ul { display: none; }
+    }
 
-      /* ── HERO ───────────────────────────────────────────── */
-      .hero {
-        background: var(--navy);
-        color: #fff;
-        padding: 96px 24px 80px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-      }
-      .hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background:
-          radial-gradient(
-            ellipse 60% 50% at 50% -10%,
-            rgba(232, 160, 32, 0.18) 0%,
-            transparent 70%
-          ),
-          radial-gradient(
-            ellipse 40% 40% at 80% 110%,
-            rgba(232, 160, 32, 0.1) 0%,
-            transparent 70%
-          );
-        pointer-events: none;
-      }
-      .hero-eyebrow {
-        display: inline-block;
-        background: rgba(232, 160, 32, 0.18);
-        color: var(--gold);
-        border: 1px solid var(--gold-border);
-        font-size: 12px;
-        font-weight: 600;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        padding: 6px 16px;
-        border-radius: 100px;
-        margin-bottom: 32px;
-      }
-      .hero h1 {
-        font-size: clamp(34px, 5.5vw, 62px);
-        font-weight: 800;
-        line-height: 1.08;
-        letter-spacing: -0.03em;
-        max-width: 820px;
-        margin: 0 auto 24px;
-      }
-      .hero h1 em {
-        font-style: normal;
-        color: var(--gold);
-      }
-      .hero-sub {
-        font-size: clamp(16px, 2vw, 19px);
-        color: rgba(255, 255, 255, 0.72);
-        max-width: 580px;
-        margin: 0 auto 48px;
-        line-height: 1.6;
-      }
-      .hero-actions {
-        display: flex;
-        gap: 14px;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      .btn-primary {
-        background: var(--gold);
-        color: var(--navy);
-        font-weight: 700;
-        font-size: 15px;
-        padding: 14px 28px;
-        border-radius: 8px;
-        transition: background 0.15s;
-        display: inline-block;
-      }
-      .btn-primary:hover {
-        background: #d4911c;
-      }
-      .btn-ghost {
-        background: rgba(255, 255, 255, 0.1);
-        color: #fff;
-        border: 1.5px solid rgba(255, 255, 255, 0.25);
-        font-weight: 600;
-        font-size: 15px;
-        padding: 14px 28px;
-        border-radius: 8px;
-        transition: all 0.15s;
-        display: inline-block;
-      }
-      .btn-ghost:hover {
-        background: rgba(255, 255, 255, 0.18);
-      }
+    /* ── HERO ───────────────────────────────────────────── */
+    .hero {
+      background: var(--navy);
+      color: #fff;
+      padding: 96px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% -10%, rgba(232,160,32,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 80% 110%, rgba(232,160,32,0.10) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      background: rgba(232,160,32,0.18);
+      color: var(--gold);
+      border: 1px solid var(--gold-border);
+      font-size: 12px; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 6px 16px; border-radius: 100px; margin-bottom: 32px;
+    }
+    .hero h1 {
+      font-size: clamp(34px, 5.5vw, 62px);
+      font-weight: 800; line-height: 1.08;
+      letter-spacing: -0.03em;
+      max-width: 820px; margin: 0 auto 24px;
+    }
+    .hero h1 em { font-style: normal; color: var(--gold); }
+    .hero-sub {
+      font-size: clamp(16px, 2vw, 19px);
+      color: rgba(255,255,255,0.72);
+      max-width: 580px; margin: 0 auto 48px; line-height: 1.6;
+    }
+    .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--gold); color: var(--navy);
+      font-weight: 700; font-size: 15px;
+      padding: 14px 28px; border-radius: 8px;
+      transition: background 0.15s; display: inline-block;
+    }
+    .btn-primary:hover { background: #d4911c; }
+    .btn-ghost {
+      background: rgba(255,255,255,0.1); color: #fff;
+      border: 1.5px solid rgba(255,255,255,0.25);
+      font-weight: 600; font-size: 15px;
+      padding: 14px 28px; border-radius: 8px;
+      transition: all 0.15s; display: inline-block;
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,0.18); }
 
-      .hero-stats {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-        margin-top: 56px;
-        flex-wrap: wrap;
-      }
-      .hero-stat {
-        text-align: center;
-      }
-      .hero-stat .num {
-        font-size: 28px;
-        font-weight: 800;
-        color: var(--gold);
-        display: block;
-        line-height: 1;
-      }
-      .hero-stat .lbl {
-        font-size: 12px;
-        color: rgba(255, 255, 255, 0.55);
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        margin-top: 4px;
-        display: block;
-      }
+    .hero-stats {
+      display: flex; justify-content: center;
+      gap: 40px; margin-top: 56px; flex-wrap: wrap;
+    }
+    .hero-stat { text-align: center; }
+    .hero-stat .num { font-size: 28px; font-weight: 800; color: var(--gold); display: block; line-height: 1; }
+    .hero-stat .lbl { font-size: 11px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px; display: block; }
 
-      /* ── INTRO ─────────────────────────────────────────── */
-      .intro {
-        background: var(--bg-soft);
-        border-bottom: 1px solid var(--border);
-        padding: 64px 24px;
-      }
-      .intro-inner {
-        max-width: var(--max);
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1.1fr 1fr;
-        gap: 60px;
-        align-items: start;
-      }
-      @media (max-width: 760px) {
-        .intro-inner {
-          grid-template-columns: 1fr;
-          gap: 32px;
-        }
-      }
-      .section-eyebrow {
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--gold);
-        margin-bottom: 12px;
-      }
-      .intro h2 {
-        font-size: clamp(22px, 3vw, 30px);
-        font-weight: 700;
-        line-height: 1.25;
-        color: var(--navy);
-        margin-bottom: 16px;
-      }
-      .intro p {
-        color: var(--slate);
-        font-size: 15.5px;
-        line-height: 1.7;
-        margin-bottom: 12px;
-      }
-      .check-list {
-        list-style: none;
-        margin-top: 8px;
-      }
-      .check-list li {
-        display: flex;
-        gap: 10px;
-        font-size: 14.5px;
-        color: var(--text);
-        padding: 10px 0;
-        border-bottom: 1px dashed var(--border);
-      }
-      .check-list li:last-child {
-        border-bottom: none;
-      }
-      .check-list .ck {
-        color: var(--gold);
-        font-weight: 700;
-        flex-shrink: 0;
-      }
+    /* ── INTRO ─────────────────────────────────────────── */
+    .intro {
+      background: var(--bg-soft);
+      border-bottom: 1px solid var(--border);
+      padding: 72px 24px;
+    }
+    .intro-inner {
+      max-width: var(--max); margin: 0 auto;
+      display: grid; grid-template-columns: 1.1fr 1fr;
+      gap: 60px; align-items: start;
+    }
+    @media (max-width: 760px) { .intro-inner { grid-template-columns: 1fr; gap: 36px; } }
+    .section-eyebrow {
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 12px;
+    }
+    .intro h2 {
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 700; line-height: 1.25;
+      color: var(--navy); margin-bottom: 16px;
+    }
+    .intro p {
+      color: var(--slate); font-size: 15.5px;
+      line-height: 1.7; margin-bottom: 12px;
+    }
+    .check-list { list-style: none; margin-top: 8px; }
+    .check-list li {
+      display: flex; gap: 10px; font-size: 14.5px;
+      color: var(--text); padding: 10px 0;
+      border-bottom: 1px dashed var(--border);
+    }
+    .check-list li:last-child { border-bottom: none; }
+    .check-list .ck { color: var(--gold); font-weight: 700; flex-shrink: 0; }
 
-      /* ── CATALOG ───────────────────────────────────────── */
-      .catalog {
-        padding: 72px 24px 48px;
-      }
-      .catalog-inner {
-        max-width: var(--max);
-        margin: 0 auto;
-      }
-      .catalog-head {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        margin-bottom: 8px;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-      .catalog-head h2 {
-        font-size: clamp(24px, 3.5vw, 34px);
-        font-weight: 800;
-        color: var(--navy);
-      }
-      .catalog-count {
-        font-size: 12px;
-        font-weight: 600;
-        color: var(--slate);
-        background: var(--bg-soft);
-        border: 1px solid var(--border);
-        padding: 4px 12px;
-        border-radius: 20px;
-      }
-      .catalog-note {
-        color: var(--slate);
-        font-size: 15px;
-        max-width: 56ch;
-        margin-bottom: 40px;
-      }
+    /* ── CATALOG ───────────────────────────────────────── */
+    .catalog { padding: 72px 24px 56px; }
+    .catalog-inner { max-width: var(--max); margin: 0 auto; }
+    .catalog-head {
+      display: flex; justify-content: space-between;
+      align-items: baseline; margin-bottom: 8px;
+      flex-wrap: wrap; gap: 10px;
+    }
+    .catalog-head h2 {
+      font-size: clamp(24px, 3.5vw, 34px);
+      font-weight: 800; color: var(--navy);
+    }
+    .catalog-count {
+      font-size: 12px; font-weight: 600; color: var(--slate);
+      background: var(--bg-soft); border: 1px solid var(--border);
+      padding: 4px 12px; border-radius: 20px;
+    }
+    .catalog-note {
+      color: var(--slate); font-size: 15px;
+      max-width: 56ch; margin-bottom: 48px;
+    }
 
-      /* Drawer group */
-      .drawer-group {
-        margin-bottom: 36px;
-      }
-      .drawer-label {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        margin-bottom: 12px;
-        flex-wrap: wrap;
-      }
-      .drawer-tab {
-        background: var(--navy);
-        color: #fff;
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        padding: 5px 12px;
-        border-radius: 4px 4px 0 0;
-        flex-shrink: 0;
-      }
-      .drawer-name {
-        font-size: 16px;
-        font-weight: 700;
-        color: var(--navy);
-      }
-      .drawer-why {
-        font-size: 13px;
-        color: var(--slate);
-        margin-left: auto;
-      }
-      @media (max-width: 600px) {
-        .drawer-why {
-          display: none;
-        }
-      }
+    /* Drawer group */
+    .drawer-group { margin-bottom: 40px; }
+    .drawer-label {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 12px; flex-wrap: wrap;
+    }
+    .drawer-tab {
+      background: var(--navy); color: #fff;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.08em; padding: 5px 12px;
+      border-radius: 4px 4px 0 0; flex-shrink: 0;
+    }
+    .drawer-name { font-size: 16px; font-weight: 700; color: var(--navy); }
+    .drawer-why { font-size: 13px; color: var(--slate); margin-left: auto; }
+    @media (max-width: 600px) { .drawer-why { display: none; } }
 
-      .card-row {
-        display: flex;
-        flex-wrap: wrap;
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        overflow: hidden;
-      }
-      .cat-card {
-        flex: 1 1 180px;
-        background: var(--bg);
-        border-right: 1px solid var(--border);
-        border-bottom: 1px solid var(--border);
-        padding: 12px 16px;
-        transition: background 0.15s;
-        cursor: default;
-      }
-      .cat-card:last-child {
-        border-right: none;
-      }
-      .cat-card:hover {
-        background: var(--gold-light);
-      }
-      .cat-card .idx {
-        display: block;
-        font-size: 10px;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: var(--slate);
-        margin-bottom: 4px;
-      }
-      .cat-card .name {
-        font-size: 13.5px;
-        font-weight: 500;
-        color: var(--text);
-        line-height: 1.3;
-      }
-      .cat-card .meta {
-        margin-top: 6px;
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-      }
-      .cat-card .badge {
-        font-size: 10px;
-        font-weight: 600;
-        padding: 2px 7px;
-        border-radius: 4px;
-        background: var(--bg-soft);
-        border: 1px solid var(--border);
-        color: var(--slate);
-      }
-      .cat-card .badge.price {
-        color: var(--navy);
-        border-color: var(--navy);
-        background: rgba(15, 31, 61, 0.05);
-      }
+    .card-row {
+      display: flex; flex-wrap: wrap;
+      border: 1px solid var(--border);
+      border-radius: 0 var(--radius) var(--radius) var(--radius);
+      overflow: hidden;
+    }
+    .cat-card {
+      flex: 1 1 170px;
+      background: var(--bg);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 16px;
+      transition: background 0.15s;
+    }
+    .cat-card:hover { background: var(--gold-light); }
 
-      /* Loading / error state */
-      .sheet-status {
-        text-align: center;
-        padding: 48px 24px;
-        color: var(--slate);
-        font-size: 14px;
-      }
-      .sheet-status .spinner {
-        width: 32px;
-        height: 32px;
-        border: 3px solid var(--border);
-        border-top-color: var(--gold);
-        border-radius: 50%;
-        animation: spin 0.8s linear infinite;
-        margin: 0 auto 14px;
-      }
-      @keyframes spin {
-        to {
-          transform: rotate(360deg);
-        }
-      }
+    /* Image-enabled card */
+    .cat-card.has-img { padding: 0; overflow: hidden; }
+    .cat-card.has-img .card-img {
+      width: 100%; aspect-ratio: 4/3;
+      object-fit: cover; display: block;
+    }
+    .cat-card.has-img .card-body { padding: 12px 14px; }
 
-      /* ── HOW IT WORKS ──────────────────────────────────── */
-      .how {
-        background: var(--bg-soft);
-        border-top: 1px solid var(--border);
-        border-bottom: 1px solid var(--border);
-        padding: 72px 24px;
-      }
-      .how-inner {
-        max-width: var(--max);
-        margin: 0 auto;
-      }
-      .how h2 {
-        font-size: clamp(22px, 3vw, 30px);
-        font-weight: 800;
-        color: var(--navy);
-        margin-bottom: 40px;
-      }
-      .how-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-      }
-      @media (max-width: 760px) {
-        .how-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-      .how-card {
-        background: var(--bg);
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        padding: 28px 24px;
-      }
-      .how-card .step {
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--gold);
-        margin-bottom: 12px;
-        display: block;
-      }
-      .how-card h4 {
-        font-size: 17px;
-        font-weight: 700;
-        color: var(--navy);
-        margin-bottom: 8px;
-      }
-      .how-card p {
-        font-size: 14px;
-        color: var(--slate);
-        line-height: 1.65;
-      }
+    .cat-card .idx {
+      display: block; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--slate); margin-bottom: 4px;
+    }
+    .cat-card .name {
+      font-size: 13.5px; font-weight: 500;
+      color: var(--text); line-height: 1.3;
+    }
 
-      /* ── CTA ───────────────────────────────────────────── */
-      .cta-section {
-        background: var(--navy);
-        color: #fff;
-        padding: 80px 24px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-      }
-      .cta-section::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(
-          ellipse 60% 60% at 50% 120%,
-          rgba(232, 160, 32, 0.12) 0%,
-          transparent 70%
-        );
-        pointer-events: none;
-      }
-      .cta-section h2 {
-        font-size: clamp(26px, 4vw, 42px);
-        font-weight: 800;
-        line-height: 1.15;
-        max-width: 16ch;
-        margin: 0 auto 16px;
-      }
-      .cta-section h2 em {
-        font-style: normal;
-        color: var(--gold);
-      }
-      .cta-section p {
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 16px;
-        max-width: 46ch;
-        margin: 0 auto 36px;
-      }
-      .cta-actions {
-        display: flex;
-        gap: 14px;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      .btn-cta-primary {
-        background: var(--gold);
-        color: var(--navy);
-        font-weight: 700;
-        font-size: 15px;
-        padding: 14px 32px;
-        border-radius: 8px;
-        transition: background 0.15s;
-      }
-      .btn-cta-primary:hover {
-        background: #d4911c;
-      }
-      .btn-cta-ghost {
-        background: rgba(255, 255, 255, 0.1);
-        color: #fff;
-        border: 1.5px solid rgba(255, 255, 255, 0.25);
-        font-weight: 600;
-        font-size: 15px;
-        padding: 14px 28px;
-        border-radius: 8px;
-        transition: all 0.15s;
-      }
-      .btn-cta-ghost:hover {
-        background: rgba(255, 255, 255, 0.18);
-      }
+    /* Loading state */
+    .sheet-status {
+      text-align: center; padding: 48px 24px;
+      color: var(--slate); font-size: 14px;
+    }
+    .sheet-status .spinner {
+      width: 32px; height: 32px;
+      border: 3px solid var(--border);
+      border-top-color: var(--gold);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 14px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
 
-      /* ── FOOTER ─────────────────────────────────────────── */
-      footer {
-        background: var(--navy);
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
-        padding: 32px 24px;
-      }
-      .footer-inner {
-        max-width: var(--max);
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 16px;
-      }
-      .footer-logo {
-        font-size: 15px;
-        font-weight: 700;
-        color: #fff;
-      }
-      .footer-logo span {
-        color: var(--gold);
-      }
-      .footer-tagline {
-        font-size: 12px;
-        color: rgba(255, 255, 255, 0.4);
-        margin-top: 4px;
-      }
-      .footer-links {
-        list-style: none;
-        display: flex;
-        gap: 24px;
-        flex-wrap: wrap;
-      }
-      .footer-links a {
-        font-size: 13px;
-        color: rgba(255, 255, 255, 0.5);
-        transition: color 0.15s;
-      }
-      .footer-links a:hover {
-        color: #fff;
-      }
+    /* ── HOW IT WORKS ──────────────────────────────────── */
+    .how {
+      background: var(--bg-soft);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 72px 24px;
+    }
+    .how-inner { max-width: var(--max); margin: 0 auto; }
+    .how h2 {
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 800; color: var(--navy); margin-bottom: 40px;
+    }
+    .how-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    }
+    @media (max-width: 760px) { .how-grid { grid-template-columns: 1fr; } }
+    .how-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px 24px;
+    }
+    .how-card .step {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 12px; display: block;
+    }
+    .how-card h4 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .how-card p { font-size: 14px; color: var(--slate); line-height: 1.65; }
 
-      /* ── SHEET NOTICE ───────────────────────────────────── */
-      .sheet-notice {
-        background: var(--gold-light);
-        border: 1px solid rgba(232, 160, 32, 0.4);
-        border-radius: 8px;
-        padding: 12px 18px;
-        font-size: 13px;
-        color: var(--navy);
-        margin-bottom: 32px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- NAV -->
-    <nav>
-      <div class="nav-inner">
-        <a href="/" class="logo">School Solutions <span>Global</span></a>
-        <div class="nav-links">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li>
-              <a href="https://schoolsolutionsglobal.com/quote/" target="_blank"
-                >Instant Quote</a
-              >
-            </li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <a href="https://app.schoolsolutionsglobal.com" class="nav-cta"
-            >Login</a
-          >
-        </div>
-      </div>
-    </nav>
+    /* ── CTA ───────────────────────────────────────────── */
+    .cta-section {
+      background: var(--navy); color: #fff;
+      padding: 80px 24px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .cta-section::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 60% at 50% 120%, rgba(232,160,32,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-section h2 {
+      font-size: clamp(26px, 4vw, 42px);
+      font-weight: 800; line-height: 1.15;
+      max-width: 16ch; margin: 0 auto 16px;
+    }
+    .cta-section h2 em { font-style: normal; color: var(--gold); }
+    .cta-section p {
+      color: rgba(255,255,255,0.7); font-size: 16px;
+      max-width: 46ch; margin: 0 auto 36px;
+    }
+    .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-cta-primary {
+      background: var(--gold); color: var(--navy);
+      font-weight: 700; font-size: 15px;
+      padding: 14px 32px; border-radius: 8px;
+      transition: background 0.15s;
+    }
+    .btn-cta-primary:hover { background: #d4911c; }
+    .btn-cta-ghost {
+      background: rgba(255,255,255,0.1); color: #fff;
+      border: 1.5px solid rgba(255,255,255,0.25);
+      font-weight: 600; font-size: 15px;
+      padding: 14px 28px; border-radius: 8px;
+      transition: all 0.15s;
+    }
+    .btn-cta-ghost:hover { background: rgba(255,255,255,0.18); }
 
-    <!-- HERO -->
-    <div class="hero">
-      <div class="hero-eyebrow">Promotional Products · K–12 Edition</div>
-      <h1>
-        Your school already has a<br />budget line for this.<br /><em
-          >It's called supplies.</em
-        >
-      </h1>
-      <p class="hero-sub">
-        Spirit wear, field-day prizes, teacher appreciation gifts, graduation
-        keepsakes — schools buy hundreds of these items every year. We make it
-        easier, cheaper, and faster.
-      </p>
-      <div class="hero-actions">
-        <a href="#catalog" class="btn-primary">Browse the catalog</a>
-        <a href="#contact" class="btn-ghost">Get a quote</a>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <span class="num">300+</span><span class="lbl">Items on file</span>
-        </div>
-        <div class="hero-stat">
-          <span class="num">Low</span><span class="lbl">Min. orders</span>
-        </div>
-        <div class="hero-stat">
-          <span class="num">Fast</span><span class="lbl">Turnaround</span>
-        </div>
-        <div class="hero-stat">
-          <span class="num">K–12</span><span class="lbl">Focused pricing</span>
-        </div>
+    /* ── FOOTER ─────────────────────────────────────────── */
+    footer {
+      background: var(--navy);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 32px 24px;
+    }
+    .footer-inner {
+      max-width: var(--max); margin: 0 auto;
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 16px;
+    }
+    .footer-logo { font-size: 15px; font-weight: 700; color: #fff; }
+    .footer-logo span { color: var(--gold); }
+    .footer-tagline { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 4px; }
+    .footer-links { list-style: none; display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { font-size: 13px; color: rgba(255,255,255,0.5); transition: color 0.15s; }
+    .footer-links a:hover { color: #fff; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">School Solutions <span>Global</span></a>
+    <div class="nav-links">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="https://schoolsolutionsglobal.com/quote/" target="_blank">Instant Quote</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="https://app.schoolsolutionsglobal.com" class="nav-cta">Login</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">Promotional Products · K–12 Edition</div>
+  <h1>Your school already has a<br/>budget line for this.<br/><em>It's called supplies.</em></h1>
+  <p class="hero-sub">Spirit wear, field-day prizes, teacher appreciation gifts, graduation keepsakes — schools buy hundreds of these items every year. We make it easier, faster, and more affordable.</p>
+  <div class="hero-actions">
+    <a href="#catalog" class="btn-primary">Browse the catalog</a>
+    <a href="#contact" class="btn-ghost">Get a quote</a>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat"><span class="num">300+</span><span class="lbl">Items on file</span></div>
+    <div class="hero-stat"><span class="num">Low</span><span class="lbl">Minimums</span></div>
+    <div class="hero-stat"><span class="num">Fast</span><span class="lbl">Turnaround</span></div>
+    <div class="hero-stat"><span class="num">K–12</span><span class="lbl">Focused</span></div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="intro-inner">
+    <div>
+      <p class="section-eyebrow">Why SSG Promo</p>
+      <h2>You're already buying these. Just maybe not from a promo company.</h2>
+      <p>Lanyards for substitute badges. Water bottles for the cross-country team. Drawstring bags for the kindergarten field trip. Pencils stamped with the PTA logo for back-to-school night. None of it feels like "branded merch" when you're the one ordering it — but it's exactly what we specialize in, often at better prices than the school-supply catalog you're used to.</p>
+    </div>
+    <div>
+      <ul class="check-list">
+        <li><span class="ck">✓</span> Fundraisers &amp; spirit wear that don't blow the PTA budget</li>
+        <li><span class="ck">✓</span> Field day, award ceremonies &amp; graduation keepsakes</li>
+        <li><span class="ck">✓</span> Teacher &amp; staff appreciation gifts, ordered once a year</li>
+        <li><span class="ck">✓</span> Classroom basics — pencils, folders, name-tag lanyards — at bulk rates</li>
+        <li><span class="ck">✓</span> Low minimum order quantities, so a single classroom can order too</li>
+        <li><span class="ck">✓</span> You approve a proof before anything goes to print</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CATALOG -->
+<section class="catalog" id="catalog">
+  <div class="catalog-inner">
+    <div class="catalog-head">
+      <h2>The catalog, by category</h2>
+      <span class="catalog-count" id="item-count"></span>
+    </div>
+    <p class="catalog-note">A working sample of what we stock and can quote fast. If it's not listed, ask anyway — this is a fraction of our full line.</p>
+    <div id="catalog-body">
+      <div class="sheet-status">
+        <div class="spinner"></div>
+        Loading catalog…
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- INTRO -->
-    <section class="intro">
-      <div class="intro-inner">
-        <div>
-          <p class="section-eyebrow">Why SSG Promo</p>
-          <h2>
-            You're already buying these. Just maybe not from a promo company.
-          </h2>
-          <p>
-            Lanyards for substitute badges. Water bottles for the cross-country
-            team. Drawstring bags for the kindergarten field trip. Pencils
-            stamped with the PTA logo for back-to-school night. None of it feels
-            like "branded merch" when you're the one ordering it — but it's
-            exactly what we specialize in, often at better prices than the
-            school-supply catalog you're used to.
-          </p>
-        </div>
-        <div>
-          <ul class="check-list">
-            <li>
-              <span class="ck">✓</span> Fundraisers &amp; spirit wear that don't
-              blow the PTA budget
-            </li>
-            <li>
-              <span class="ck">✓</span> Field day, award ceremonies &amp;
-              graduation keepsakes
-            </li>
-            <li>
-              <span class="ck">✓</span> Teacher &amp; staff appreciation gifts,
-              ordered once a year
-            </li>
-            <li>
-              <span class="ck">✓</span> Classroom basics — pencils, folders,
-              name-tag lanyards — at bulk rates
-            </li>
-            <li>
-              <span class="ck">✓</span> Low minimum order quantities, so a
-              single classroom can order too
-            </li>
-            <li>
-              <span class="ck">✓</span> ASI-sourced items — same supplier
-              network the big promo companies use
-            </li>
-          </ul>
-        </div>
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="how-inner">
+    <h2>How a school order actually works</h2>
+    <div class="how-grid">
+      <div class="how-card">
+        <span class="step">Step 01</span>
+        <h4>Tell us the event</h4>
+        <p>Field day, fundraiser, staff gift, classroom restock — and a rough headcount or budget. No purchase order required to start a quote.</p>
       </div>
-    </section>
-
-    <!-- CATALOG -->
-    <section class="catalog" id="catalog">
-      <div class="catalog-inner">
-        <div class="catalog-head">
-          <h2>The catalog, by category</h2>
-          <span class="catalog-count" id="item-count">Loading…</span>
-        </div>
-        <p class="catalog-note">
-          A working sample of what we stock and can quote fast. If it's not
-          listed, ask anyway — this is a fraction of the full ASI line.
-        </p>
-
-        <div id="catalog-body">
-          <div class="sheet-status">
-            <div class="spinner"></div>
-            Loading catalog from Google Sheets…
-          </div>
-        </div>
+      <div class="how-card">
+        <span class="step">Step 02</span>
+        <h4>We send real pricing</h4>
+        <p>You'll get actual unit prices at your quantity, with minimums as low as 5–50 units on many items — sized for a classroom, not just a district.</p>
       </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section class="how">
-      <div class="how-inner">
-        <h2>How a school order actually works</h2>
-        <div class="how-grid">
-          <div class="how-card">
-            <span class="step">Step 01</span>
-            <h4>Tell us the event</h4>
-            <p>
-              Field day, fundraiser, staff gift, classroom restock — and a rough
-              headcount or budget. No purchase order required to start a quote.
-            </p>
-          </div>
-          <div class="how-card">
-            <span class="step">Step 02</span>
-            <h4>We send real pricing</h4>
-            <p>
-              You'll get actual unit prices at your quantity, with minimums as
-              low as 5–50 units on many items — sized for a classroom, not just
-              a district.
-            </p>
-          </div>
-          <div class="how-card">
-            <span class="step">Step 03</span>
-            <h4>Approve art &amp; we produce</h4>
-            <p>
-              Send a logo or mascot, or we'll help you build one. You approve a
-              proof before anything goes to print.
-            </p>
-          </div>
-        </div>
+      <div class="how-card">
+        <span class="step">Step 03</span>
+        <h4>Approve art &amp; we produce</h4>
+        <p>Send a logo or mascot, or we'll help you build one. You approve a proof before anything goes to print.</p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- CTA -->
-    <section class="cta-section" id="contact">
-      <h2>Have an event on the calendar?<br /><em>Let's quote it.</em></h2>
-      <p>
-        Send us the date, the rough budget, and what it's for. We'll come back
-        with options and real pricing — usually within a day.
-      </p>
-      <div class="cta-actions">
-        <a
-          href="mailto:info@schoolsolutionsglobal.com?subject=Promo%20Quote%20Request"
-          class="btn-cta-primary"
-          >Email us your event details</a
-        >
-        <a href="#catalog" class="btn-cta-ghost">Back to the catalog</a>
-      </div>
-    </section>
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <h2>Have an event on the calendar?<br/><em>Let's quote it.</em></h2>
+  <p>Send us the date, the rough budget, and what it's for. We'll come back with options and real pricing — usually within a day.</p>
+  <div class="cta-actions">
+    <a href="mailto:info@schoolsolutionsglobal.com?subject=Promo%20Quote%20Request" class="btn-cta-primary">Email us your event details</a>
+    <a href="#catalog" class="btn-cta-ghost">Back to the catalog</a>
+  </div>
+</section>
 
-    <!-- FOOTER -->
-    <footer>
-      <div class="footer-inner">
-        <div>
-          <div class="footer-logo">School Solutions <span>Global</span></div>
-          <div class="footer-tagline">Lead the program. Not carry it.</div>
-        </div>
-        <ul class="footer-links">
-          <li><a href="/">Home</a></li>
-          <li>
-            <a href="https://schoolsolutionsglobal.com/quote/" target="_blank"
-              >Instant Quote</a
-            >
-          </li>
-          <li><a href="mailto:info@schoolsolutionsglobal.com">Contact</a></li>
-          <li><a href="https://app.schoolsolutionsglobal.com">Login</a></li>
-        </ul>
-      </div>
-    </footer>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">School Solutions <span>Global</span></div>
+      <div class="footer-tagline">Lead the program. Not carry it.</div>
+    </div>
+    <ul class="footer-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="https://schoolsolutionsglobal.com/quote/" target="_blank">Instant Quote</a></li>
+      <li><a href="mailto:info@schoolsolutionsglobal.com">Contact</a></li>
+      <li><a href="https://app.schoolsolutionsglobal.com">Login</a></li>
+    </ul>
+  </div>
+</footer>
 
-    <script>
-      // ── STATIC FALLBACK CATALOG ─────────────────────────────
-      // Used when Google Sheet is empty or unreachable.
-      const FALLBACK = [
-        {
-          num: "01",
-          name: "Spirit Wear & Apparel",
-          why: "Pep rallies, sports teams, class shirts",
-          items: [
-            { code: "CLO-01", name: "T-Shirts / Unisex" },
-            { code: "CLO-02", name: "Caps & Hats / Six Panel" },
-            { code: "CLO-03", name: "Caps & Hats / Beanie" },
-            { code: "CLO-04", name: "Sweatshirts" },
-            { code: "CLO-05", name: "Socks" },
-            { code: "CLO-06", name: "Bandannas" },
-            { code: "CLO-07", name: "Wristbands" },
-          ],
-        },
-        {
-          num: "02",
-          name: "Awards & Recognition",
-          why: "Field day, honor roll, graduation",
-          items: [
-            { code: "AWD-01", name: "Full Color Direct Print Plaques" },
-            { code: "AWD-02", name: "Acrylic Awards" },
-            { code: "AWD-03", name: "Medals" },
-            { code: "AWD-04", name: "Sashes" },
-            { code: "AWD-05", name: "Certificate Holders & Frames" },
-            { code: "AWD-06", name: "Custom Lapel Pins" },
-          ],
-        },
-        {
-          num: "03",
-          name: "Bags & Backpacks",
-          why: "Field trips, book fairs, fundraisers",
-          items: [
-            { code: "BAG-01", name: "Backpacks / School" },
-            { code: "BAG-02", name: "Drawstring Backpacks" },
-            { code: "BAG-03", name: "Tote Bags / Canvas" },
-            { code: "BAG-04", name: "Tote Bags / Non-Woven" },
-            { code: "BAG-05", name: "Lunch Bags" },
-            { code: "BAG-06", name: "Messenger Bags" },
-          ],
-        },
-        {
-          num: "04",
-          name: "Classroom & Office Basics",
-          why: "Back-to-school, supply drives",
-          items: [
-            { code: "CLS-01", name: "Pens / Ballpoint" },
-            { code: "CLS-02", name: "Pencils / Mechanical" },
-            { code: "CLS-03", name: "Notebooks" },
-            { code: "CLS-04", name: "Memo Pads / Sticky Notes" },
-            { code: "CLS-05", name: "Highlighters" },
-            { code: "CLS-06", name: "Erasers & Crayons" },
-            { code: "CLS-07", name: "Rulers" },
-            { code: "CLS-08", name: "Clipboards" },
-          ],
-        },
-        {
-          num: "05",
-          name: "Art & Craft Supplies",
-          why: "Art class, summer camp kits",
-          items: [
-            { code: "ART-01", name: "Art Color Pencils (5-Pack)" },
-            { code: "ART-02", name: "A4 Sketchbooks" },
-            { code: "ART-03", name: "Wooden Palettes for Children" },
-            { code: "ART-04", name: "Clear Plastic Straight Rulers" },
-          ],
-        },
-        {
-          num: "06",
-          name: "Drinkware",
-          why: "Sports teams, staff gifts",
-          items: [
-            { code: "DRK-01", name: "Travel Mugs / Cups" },
-            { code: "DRK-02", name: "Insulated Glasses" },
-            { code: "DRK-03", name: "Mugs & Steins / Ceramic" },
-            { code: "DRK-04", name: "Insulated Bottles" },
-            { code: "DRK-05", name: "Beverage Holder Sleeves" },
-          ],
-        },
-        {
-          num: "07",
-          name: "Health & Safety",
-          why: "Nurse's office, carpool line",
-          items: [
-            { code: "HLT-01", name: "Hand Sanitizer" },
-            { code: "HLT-02", name: "Tyvek Parent-Pickup Wristbands" },
-            { code: "HLT-03", name: "Vests / Safety" },
-            { code: "HLT-04", name: "Badge Holders / Retractable" },
-            { code: "HLT-05", name: "Lanyards" },
-          ],
-        },
-        {
-          num: "08",
-          name: "Tech & Everyday Carry",
-          why: "High schoolers, staff, raffles",
-          items: [
-            { code: "TEC-01", name: "USB / Flash Drives" },
-            { code: "TEC-02", name: "USB Fans" },
-            { code: "TEC-03", name: "Power Banks" },
-            { code: "TEC-04", name: "Mobile Accessories" },
-            { code: "TEC-05", name: "Mousepads" },
-          ],
-        },
-        {
-          num: "09",
-          name: "Fun, Games & Prizes",
-          why: "Carnival booths, reading rewards",
-          items: [
-            { code: "FUN-01", name: "Stress Relievers / Squishies" },
-            { code: "FUN-02", name: "Toys / Fidget" },
-            { code: "FUN-03", name: "Puzzles & Tricks" },
-            { code: "FUN-04", name: "Stuffed Animals & Toys" },
-            { code: "FUN-05", name: "Glow Products" },
-            { code: "FUN-06", name: "Key Chains" },
-          ],
-        },
-        {
-          num: "10",
-          name: "Snacks, Treats & Gifts",
-          why: "Teacher appreciation, holiday gifts",
-          items: [
-            { code: "GFT-01", name: "Candy / Chocolate & Mints" },
-            { code: "GFT-02", name: "Food Gifts / Trail Mix" },
-            { code: "GFT-03", name: "Gift Sets" },
-            { code: "GFT-04", name: "Journals & Diaries" },
-            { code: "GFT-05", name: "Lip Balm" },
-          ],
-        },
-        {
-          num: "11",
-          name: "Outdoor, Events & Signage",
-          why: "Open house, sports days, fairs",
-          items: [
-            { code: "EVT-01", name: "Banners & Flags" },
-            { code: "EVT-02", name: "Canopies & Tents" },
-            { code: "EVT-03", name: "Tablecloths & Sets" },
-            { code: "EVT-04", name: "Folding Sun Shades" },
-            { code: "EVT-05", name: "Signs & Displays" },
-          ],
-        },
-      ];
+<script>
+// ── STATIC CATALOG ──────────────────────────────────────
+// This is the full default catalog. It is replaced automatically
+// if live inventory data is available.
+const FALLBACK = [
+  {
+    num:"01", name:"Spirit Wear & Apparel", why:"Pep rallies, sports teams, class shirts",
+    items:[
+      {code:"CLO-01", name:"T-Shirts / Unisex"},
+      {code:"CLO-02", name:"T-Shirts / Youth"},
+      {code:"CLO-03", name:"Performance / Moisture-Wicking Tees"},
+      {code:"CLO-04", name:"Sweatshirts / Crewneck"},
+      {code:"CLO-05", name:"Hoodies"},
+      {code:"CLO-06", name:"Caps & Hats / Six Panel"},
+      {code:"CLO-07", name:"Caps & Hats / Beanie"},
+      {code:"CLO-08", name:"Socks"},
+      {code:"CLO-09", name:"Bandannas"},
+      {code:"CLO-10", name:"Wristbands"},
+      {code:"CLO-11", name:"Face Masks / Custom"},
+    ]
+  },
+  {
+    num:"02", name:"Awards & Recognition", why:"Field day, honor roll, graduation",
+    items:[
+      {code:"AWD-01", name:"Full Color Direct Print Plaques"},
+      {code:"AWD-02", name:"Acrylic Awards"},
+      {code:"AWD-03", name:"Medals / Die-Cast"},
+      {code:"AWD-04", name:"Medals / Economy"},
+      {code:"AWD-05", name:"Sashes"},
+      {code:"AWD-06", name:"Trophies"},
+      {code:"AWD-07", name:"Certificate Holders & Frames"},
+      {code:"AWD-08", name:"Custom Lapel Pins"},
+      {code:"AWD-09", name:"Ribbons & Rosettes"},
+      {code:"AWD-10", name:"Gift Cards / Branded"},
+    ]
+  },
+  {
+    num:"03", name:"Bags & Backpacks", why:"Field trips, book fairs, fundraisers",
+    items:[
+      {code:"BAG-01", name:"Backpacks / School"},
+      {code:"BAG-02", name:"Drawstring Backpacks"},
+      {code:"BAG-03", name:"Tote Bags / Canvas"},
+      {code:"BAG-04", name:"Tote Bags / Non-Woven"},
+      {code:"BAG-05", name:"Lunch Bags / Insulated"},
+      {code:"BAG-06", name:"Messenger Bags"},
+      {code:"BAG-07", name:"Cinch Bags"},
+      {code:"BAG-08", name:"Fanny Packs"},
+    ]
+  },
+  {
+    num:"04", name:"Lanyards, Badges & ID", why:"Staff ID, visitor badges, carpool",
+    items:[
+      {code:"LAN-01", name:"Lanyards / Polyester"},
+      {code:"LAN-02", name:"Lanyards / Breakaway Safety"},
+      {code:"LAN-03", name:"Lanyards / Woven"},
+      {code:"LAN-04", name:"Badge Holders / Horizontal"},
+      {code:"LAN-05", name:"Badge Holders / Retractable Reel"},
+      {code:"LAN-06", name:"Tyvek Wristbands / Parent Pickup"},
+      {code:"LAN-07", name:"Name Badges / Reusable"},
+      {code:"LAN-08", name:"Visitor Sticker Rolls"},
+    ]
+  },
+  {
+    num:"05", name:"Writing & Stationery", why:"Back-to-school, supply drives, giveaways",
+    items:[
+      {code:"WRT-01", name:"Pens / Ballpoint"},
+      {code:"WRT-02", name:"Pens / Gel"},
+      {code:"WRT-03", name:"Stylus Pens"},
+      {code:"WRT-04", name:"Pencils / Wooden"},
+      {code:"WRT-05", name:"Pencils / Mechanical"},
+      {code:"WRT-06", name:"Highlighters"},
+      {code:"WRT-07", name:"Markers / Dry Erase"},
+      {code:"WRT-08", name:"Notebooks / Spiral"},
+      {code:"WRT-09", name:"Composition Books"},
+      {code:"WRT-10", name:"Memo Pads / Sticky Notes"},
+      {code:"WRT-11", name:"Clipboards"},
+      {code:"WRT-12", name:"Rulers"},
+    ]
+  },
+  {
+    num:"06", name:"Art & Craft Supplies", why:"Art class, summer camp, maker kits",
+    items:[
+      {code:"ART-01", name:"Colored Pencils (5-Pack)"},
+      {code:"ART-02", name:"Crayons (8-Pack)"},
+      {code:"ART-03", name:"Watercolor Sets"},
+      {code:"ART-04", name:"Sketchbooks / A4"},
+      {code:"ART-05", name:"Erasers / Shaped"},
+      {code:"ART-06", name:"Glue Sticks"},
+      {code:"ART-07", name:"Safety Scissors"},
+      {code:"ART-08", name:"Craft Kits / Custom Themed"},
+    ]
+  },
+  {
+    num:"07", name:"Drinkware", why:"Sports teams, staff gifts, wellness programs",
+    items:[
+      {code:"DRK-01", name:"Insulated Tumblers"},
+      {code:"DRK-02", name:"Insulated Water Bottles"},
+      {code:"DRK-03", name:"Sports Bottles / Squeeze"},
+      {code:"DRK-04", name:"Travel Mugs / Stainless"},
+      {code:"DRK-05", name:"Ceramic Coffee Mugs"},
+      {code:"DRK-06", name:"Foam Can Coolers"},
+      {code:"DRK-07", name:"Collapsible Water Bottles"},
+    ]
+  },
+  {
+    num:"08", name:"Health & Safety", why:"Nurse's office, wellness, safety drills",
+    items:[
+      {code:"HLT-01", name:"Hand Sanitizer / Pocket Size"},
+      {code:"HLT-02", name:"Hand Sanitizer / Flip-Top"},
+      {code:"HLT-03", name:"First Aid Kits / Custom Branded"},
+      {code:"HLT-04", name:"Safety Vests / Hi-Vis"},
+      {code:"HLT-05", name:"Sunscreen Packets"},
+      {code:"HLT-06", name:"Lip Balm / SPF"},
+      {code:"HLT-07", name:"Tissue Packs"},
+    ]
+  },
+  {
+    num:"09", name:"Tech & Everyday Carry", why:"High schoolers, staff appreciation, raffles",
+    items:[
+      {code:"TEC-01", name:"USB Flash Drives"},
+      {code:"TEC-02", name:"Power Banks / Portable"},
+      {code:"TEC-03", name:"Wireless Chargers"},
+      {code:"TEC-04", name:"Earbuds / Custom"},
+      {code:"TEC-05", name:"Phone Wallets / Adhesive"},
+      {code:"TEC-06", name:"USB Fans"},
+      {code:"TEC-07", name:"Mousepads / Full Color"},
+      {code:"TEC-08", name:"Cable Organizers"},
+    ]
+  },
+  {
+    num:"10", name:"Sports & Athletics", why:"Teams, PE class, intramurals",
+    items:[
+      {code:"SPT-01", name:"Mini Footballs / Foam"},
+      {code:"SPT-02", name:"Mini Basketballs / Foam"},
+      {code:"SPT-03", name:"Frisbees"},
+      {code:"SPT-04", name:"Rally Towels"},
+      {code:"SPT-05", name:"Stadium Cups"},
+      {code:"SPT-06", name:"Drawstring Sports Bags"},
+      {code:"SPT-07", name:"Cooling Towels"},
+      {code:"SPT-08", name:"Foam Fingers"},
+      {code:"SPT-09", name:"Noisemakers / Clappers"},
+    ]
+  },
+  {
+    num:"11", name:"Fun, Games & Prizes", why:"Carnival booths, reading rewards, treasure box",
+    items:[
+      {code:"FUN-01", name:"Stress Balls / Custom Shape"},
+      {code:"FUN-02", name:"Fidget Toys"},
+      {code:"FUN-03", name:"Playing Cards / Custom"},
+      {code:"FUN-04", name:"Puzzles / Logo"},
+      {code:"FUN-05", name:"Stuffed Animals"},
+      {code:"FUN-06", name:"Glow Products / Sticks & Bracelets"},
+      {code:"FUN-07", name:"Bouncy Balls"},
+      {code:"FUN-08", name:"Key Chains / Custom"},
+      {code:"FUN-09", name:"Slap Bracelets"},
+      {code:"FUN-10", name:"Silly Putty / Custom"},
+    ]
+  },
+  {
+    num:"12", name:"Snacks, Treats & Gifts", why:"Teacher appreciation, holiday gifts, PTA",
+    items:[
+      {code:"GFT-01", name:"Chocolate & Mints / Branded"},
+      {code:"GFT-02", name:"Trail Mix / Nut Packs"},
+      {code:"GFT-03", name:"Popcorn / Custom Tin"},
+      {code:"GFT-04", name:"Lip Balm"},
+      {code:"GFT-05", name:"Hand Lotion / Pocket Size"},
+      {code:"GFT-06", name:"Gift Sets / Thank You"},
+      {code:"GFT-07", name:"Journals & Diaries"},
+      {code:"GFT-08", name:"Tote Gift Bags / Custom"},
+    ]
+  },
+  {
+    num:"13", name:"Fundraising Essentials", why:"Spirit nights, walkathons, book fairs",
+    items:[
+      {code:"FND-01", name:"Pledge Cards / Custom"},
+      {code:"FND-02", name:"Donation Envelopes"},
+      {code:"FND-03", name:"Spirit Wear Bundles"},
+      {code:"FND-04", name:"Coupon Books / Branded"},
+      {code:"FND-05", name:"Raffle Tickets / Custom"},
+      {code:"FND-06", name:"Tote Bags / Fundraiser"},
+      {code:"FND-07", name:"Buttons & Pins / Custom"},
+      {code:"FND-08", name:"Car Magnets"},
+    ]
+  },
+  {
+    num:"14", name:"Graduation & Ceremonies", why:"Cap & gown events, promotion, senior gifts",
+    items:[
+      {code:"GRD-01", name:"Graduation Stoles / Custom"},
+      {code:"GRD-02", name:"Class Rings / Custom"},
+      {code:"GRD-03", name:"Diploma Frames"},
+      {code:"GRD-04", name:"Memory Books / Yearbook Style"},
+      {code:"GRD-05", name:"Keepsake Boxes"},
+      {code:"GRD-06", name:"Tassel Keychains"},
+      {code:"GRD-07", name:"Class of [Year] T-Shirts"},
+      {code:"GRD-08", name:"Graduation Banners"},
+    ]
+  },
+  {
+    num:"15", name:"Holiday & Seasonal", why:"Winter parties, spring events, end of year",
+    items:[
+      {code:"SEA-01", name:"Holiday Ornaments / Custom"},
+      {code:"SEA-02", name:"Gift Wrap / Branded"},
+      {code:"SEA-03", name:"Seasonal Tote Bags"},
+      {code:"SEA-04", name:"Valentine Cards / Class Sets"},
+      {code:"SEA-05", name:"Easter Treat Bags"},
+      {code:"SEA-06", name:"End-of-Year Gift Tags"},
+      {code:"SEA-07", name:"Back-to-School Kits"},
+    ]
+  },
+  {
+    num:"16", name:"Staff & Faculty Appreciation", why:"Teacher appreciation week, staff gifts",
+    items:[
+      {code:"STF-01", name:"Custom Mugs / Teacher"},
+      {code:"STF-02", name:"Engraved Pens"},
+      {code:"STF-03", name:"Personalized Notebooks"},
+      {code:"STF-04", name:"Tote Bags / Faculty"},
+      {code:"STF-05", name:"Desk Organizers / Branded"},
+      {code:"STF-06", name:"Tumbler Gift Sets"},
+      {code:"STF-07", name:"Appreciation Lapel Pins"},
+      {code:"STF-08", name:"Thank You Card Sets / Custom"},
+    ]
+  },
+  {
+    num:"17", name:"Outdoor, Events & Signage", why:"Open house, sports days, fairs, carnivals",
+    items:[
+      {code:"EVT-01", name:"Banners / Full Color"},
+      {code:"EVT-02", name:"Yard Signs / Custom"},
+      {code:"EVT-03", name:"Retractable Banners"},
+      {code:"EVT-04", name:"Step & Repeat Backdrops"},
+      {code:"EVT-05", name:"Canopies & Pop-Up Tents"},
+      {code:"EVT-06", name:"Tablecloths / Custom Printed"},
+      {code:"EVT-07", name:"Folding Sun Shades"},
+      {code:"EVT-08", name:"Door Hangers"},
+      {code:"EVT-09", name:"Balloons / Custom Printed"},
+      {code:"EVT-10", name:"Window Clings"},
+    ]
+  },
+  {
+    num:"18", name:"Stickers, Patches & Décor", why:"Classroom décor, rewards, locker swag",
+    items:[
+      {code:"STK-01", name:"Die-Cut Stickers / Custom"},
+      {code:"STK-02", name:"Sticker Sheets / Custom"},
+      {code:"STK-03", name:"Bumper Stickers"},
+      {code:"STK-04", name:"Iron-On Patches"},
+      {code:"STK-05", name:"Embroidered Patches"},
+      {code:"STK-06", name:"Wall Decals / Custom"},
+      {code:"STK-07", name:"Locker Magnets"},
+      {code:"STK-08", name:"Buttons / 1-inch Round"},
+    ]
+  },
+];
 
-      // ── CSV PARSER ───────────────────────────────────────────
-      function parseCSV(text) {
-        const rows = [];
-        const lines = text.trim().split(/\r?\n/);
-        for (const line of lines) {
-          const cols = [];
-          let cur = "",
-            inQ = false;
-          for (let i = 0; i < line.length; i++) {
-            const ch = line[i];
-            if (ch === '"') {
-              inQ = !inQ;
-            } else if (ch === "," && !inQ) {
-              cols.push(cur.trim());
-              cur = "";
-            } else {
-              cur += ch;
-            }
-          }
-          cols.push(cur.trim());
-          rows.push(cols);
-        }
-        return rows;
-      }
+// ── CSV PARSER ───────────────────────────────────────────
+function parseCSV(text) {
+  const rows = [];
+  const lines = text.trim().split(/\r?\n/);
+  for (const line of lines) {
+    const cols = [];
+    let cur = '', inQ = false;
+    for (let i = 0; i < line.length; i++) {
+      const ch = line[i];
+      if (ch === '"') { inQ = !inQ; }
+      else if (ch === ',' && !inQ) { cols.push(cur.trim()); cur = ''; }
+      else { cur += ch; }
+    }
+    cols.push(cur.trim());
+    rows.push(cols);
+  }
+  return rows;
+}
 
-      // ── RENDER CATALOG ───────────────────────────────────────
-      function renderCatalog(groups, fromSheet) {
-        const body = document.getElementById("catalog-body");
-        const countEl = document.getElementById("item-count");
+// ── RENDER ───────────────────────────────────────────────
+function esc(str) {
+  return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
 
-        let totalItems = 0;
-        groups.forEach((g) => (totalItems += g.items.length));
-        countEl.textContent = `${totalItems} items · ${groups.length} categories`;
+function renderCatalog(groups) {
+  const body = document.getElementById('catalog-body');
+  const countEl = document.getElementById('item-count');
 
-        let html = "";
+  let totalItems = 0;
+  groups.forEach(g => totalItems += g.items.length);
+  countEl.textContent = `${totalItems} items · ${groups.length} categories`;
 
-        if (fromSheet) {
-          html += `<div class="sheet-notice">
-      ✦ Live from Google Sheets — update the sheet anytime to update this page instantly.
-    </div>`;
-        }
-
-        groups.forEach((group) => {
-          html += `<div class="drawer-group">
+  let html = '';
+  groups.forEach(group => {
+    html += `<div class="drawer-group">
       <div class="drawer-label">
-        <span class="drawer-tab">${group.num}</span>
+        <span class="drawer-tab">${esc(group.num)}</span>
         <span class="drawer-name">${esc(group.name)}</span>
         <span class="drawer-why">${esc(group.why)}</span>
       </div>
       <div class="card-row">`;
-          group.items.forEach((item) => {
-            html += `<div class="cat-card">
-        <span class="idx">${esc(item.code)}</span>
-        <span class="name">${esc(item.name)}</span>`;
-            if (item.minQty || item.priceRange) {
-              html += `<div class="meta">`;
-              if (item.minQty)
-                html += `<span class="badge">Min ${esc(item.minQty)}</span>`;
-              if (item.priceRange)
-                html += `<span class="badge price">${esc(item.priceRange)}</span>`;
-              html += `</div>`;
-            }
-            html += `</div>`;
-          });
-          html += `</div></div>`;
-        });
-
-        body.innerHTML = html;
+    group.items.forEach(item => {
+      const hasImg = !!item.imgUrl;
+      html += `<div class="cat-card${hasImg ? ' has-img' : ''}">`;
+      if (hasImg) {
+        html += `<img class="card-img" src="${esc(item.imgUrl)}" alt="${esc(item.name)}" loading="lazy" />
+                 <div class="card-body">`;
       }
+      html += `<span class="idx">${esc(item.code)}</span>
+               <span class="name">${esc(item.name)}</span>`;
+      if (hasImg) html += `</div>`;
+      html += `</div>`;
+    });
+    html += `</div></div>`;
+  });
 
-      function esc(str) {
-        return String(str || "")
-          .replace(/&/g, "&amp;")
-          .replace(/</g, "&lt;")
-          .replace(/>/g, "&gt;")
-          .replace(/"/g, "&quot;");
+  body.innerHTML = html;
+}
+
+// ── LOAD FROM SHEET ──────────────────────────────────────
+// Sheet column layout (row 1 = headers):
+// A: category_num  B: category_name  C: category_why
+// D: item_code     E: item_name      F: img_url (optional)
+// G: active (yes / no — leave blank to default to yes)
+const SHEET_ID  = '1Mz44r2q4unnSmFbobFsjWDDUOmt5snCpSYClD1jt_ZI';
+const SHEET_GID = '0';
+const CSV_URL   = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${SHEET_GID}`;
+
+// Expected headers — sheet row 1 must match these exactly (case-insensitive)
+const EXPECTED_HEADERS = ['category_num','category_name','category_why','item_code','item_name','img_url','active'];
+
+async function loadCatalog() {
+  try {
+    const res = await fetch(CSV_URL);
+    if (!res.ok) throw new Error('fetch failed');
+    const text = await res.text();
+    const rows = parseCSV(text);
+    if (rows.length < 2) throw new Error('empty');
+
+    // Validate headers — bail out to fallback if sheet isn't set up correctly
+    const headers = rows[0].map(h => h.toLowerCase().trim());
+    const valid = EXPECTED_HEADERS.every((h, i) => headers[i] === h);
+    if (!valid) throw new Error('sheet not yet configured with SSG headers');
+
+    const groupMap = new Map();
+    let hasData = false;
+
+    for (let i = 1; i < rows.length; i++) {
+      const [catNum, catName, catWhy, itemCode, itemName, imgUrl, active] = rows[i];
+      if (!itemCode || !itemName) continue;
+      if (active && active.toLowerCase() === 'no') continue;
+      hasData = true;
+
+      const key = `${catNum}||${catName}`;
+      if (!groupMap.has(key)) {
+        groupMap.set(key, { num: catNum || '—', name: catName || 'Uncategorized', why: catWhy || '', items: [] });
       }
+      groupMap.get(key).items.push({ code: itemCode, name: itemName, imgUrl: imgUrl || '' });
+    }
 
-      // ── LOAD FROM GOOGLE SHEET ───────────────────────────────
-      // Expected sheet columns (row 1 = headers):
-      // A: category_num  B: category_name  C: category_why
-      // D: item_code     E: item_name      F: min_qty
-      // G: price_range   H: active (yes/no)
-      const SHEET_ID = "1Mz44r2q4unnSmFbobFsjWDDUOmt5snCpSYClD1jt_ZI";
-      const SHEET_GID = "0";
-      const CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${SHEET_GID}`;
+    if (!hasData) throw new Error('no active items');
+    renderCatalog([...groupMap.values()]);
+  } catch {
+    renderCatalog(FALLBACK);
+  }
+}
 
-      async function loadCatalog() {
-        try {
-          const res = await fetch(CSV_URL);
-          if (!res.ok) throw new Error("Fetch failed");
-          const text = await res.text();
-          const rows = parseCSV(text);
+loadCatalog();
+</script>
 
-          if (rows.length < 2) throw new Error("Empty sheet");
+<!-- Brevo Conversations -->
+<script>
+  (function(d, w, c) {
+    w.BrevoConversationsID = '69efd48346a9955aad04f9c9';
+    w[c] = w[c] || function() { (w[c].q = w[c].q || []).push(arguments); };
+    var s = d.createElement('script');
+    s.async = true;
+    s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+    if (d.head) d.head.appendChild(s);
+  })(document, window, 'BrevoConversations');
+</script>
 
-          // Skip header row, build groups
-          const groupMap = new Map();
-          let hasData = false;
-
-          for (let i = 1; i < rows.length; i++) {
-            const [
-              catNum,
-              catName,
-              catWhy,
-              itemCode,
-              itemName,
-              minQty,
-              priceRange,
-              active,
-            ] = rows[i];
-            if (!itemCode || !itemName) continue;
-            if (active && active.toLowerCase() === "no") continue;
-            hasData = true;
-
-            const key = `${catNum}__${catName}`;
-            if (!groupMap.has(key)) {
-              groupMap.set(key, {
-                num: catNum || "—",
-                name: catName || "Uncategorized",
-                why: catWhy || "",
-                items: [],
-              });
-            }
-            groupMap.get(key).items.push({
-              code: itemCode,
-              name: itemName,
-              minQty: minQty || "",
-              priceRange: priceRange || "",
-            });
-          }
-
-          if (!hasData) throw new Error("No active items in sheet");
-
-          renderCatalog([...groupMap.values()], true);
-        } catch (e) {
-          // Sheet empty or unreachable — use static fallback
-          renderCatalog(FALLBACK, false);
-        }
-      }
-
-      loadCatalog();
-    </script>
-
-    <!-- Brevo Conversations -->
-    <script>
-      (function (d, w, c) {
-        w.BrevoConversationsID = "69efd48346a9955aad04f9c9";
-        w[c] =
-          w[c] ||
-          function () {
-            (w[c].q = w[c].q || []).push(arguments);
-          };
-        var s = d.createElement("script");
-        s.async = true;
-        s.src = "https://conversations-widget.brevo.com/brevo-conversations.js";
-        if (d.head) d.head.appendChild(s);
-      })(document, window, "BrevoConversations");
-    </script>
-  </body>
+</body>
 </html>
