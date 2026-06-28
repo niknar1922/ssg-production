@@ -1245,6 +1245,32 @@
         }
       }
 
+      /* ── PROMO FEATURE ──────────────────────────────────── */
+      .promo-feature-grid {
+        position: relative;
+        z-index: 2;
+        max-width: var(--max);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+      .promo-cards-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      @media (max-width: 720px) {
+        .promo-feature-grid {
+          grid-template-columns: 1fr;
+          gap: 36px;
+        }
+        .promo-cards-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
       /* ── THREE PILLARS ──────────────────────────────────── */
       .pillars-grid {
         display: grid;
@@ -2170,18 +2196,7 @@
           pointer-events: none;
         "
       ></div>
-      <div
-        style="
-          position: relative;
-          z-index: 2;
-          max-width: var(--max);
-          margin: 0 auto;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 60px;
-          align-items: center;
-        "
-      >
+      <div class="promo-feature-grid">
         <div>
           <p
             style="
@@ -2252,7 +2267,7 @@
           >
         </div>
         <div>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px">
+          <div class="promo-cards-grid">
             <div
               style="
                 background: rgba(255, 255, 255, 0.06);
