@@ -1245,6 +1245,18 @@
         }
       }
 
+      /* ── THREE PILLARS ──────────────────────────────────── */
+      .pillars-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+      @media (max-width: 860px) {
+        .pillars-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
       /* ── SVG ICONS ──────────────────────────────────────── */
       .svg-icon {
         width: 22px;
@@ -1405,13 +1417,7 @@
             the program.
           </p>
         </div>
-        <div
-          style="
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-          "
-        >
+        <div class="pillars-grid">
           <!-- Fundraising -->
           <div
             style="
