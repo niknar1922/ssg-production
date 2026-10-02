@@ -452,6 +452,30 @@
         align-items: center;
       }
 
+      .bridge-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 32px;
+      }
+
+      .bridge-actions .btn-primary {
+        flex: 1 1 220px;
+        padding: 14px 18px;
+        font-size: 14px;
+        text-align: center;
+      }
+
+      .bridge-actions .btn-primary--navy {
+        background: var(--navy);
+        color: #fff;
+      }
+
+      .bridge-actions .btn-primary:focus-visible {
+        outline: 3px solid var(--navy);
+        outline-offset: 4px;
+      }
+
       .bridge-stat-row {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1099,6 +1123,57 @@
       .tool-card-btn:hover {
         opacity: 0.88;
       }
+      .solution-cta-row {
+        margin-top: 4px;
+      }
+      .solution-cta {
+        width: 100%;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 11px 14px;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        background: var(--gold);
+        color: var(--navy);
+        font-size: 13.5px;
+        font-weight: 700;
+        line-height: 1.35;
+        text-decoration: none;
+        transition:
+          transform 0.18s ease,
+          box-shadow 0.18s ease,
+          filter 0.18s ease;
+      }
+      .solution-cta--navy {
+        background: var(--navy);
+        color: #fff;
+      }
+      .solution-cta:hover {
+        transform: translateY(-2px);
+        filter: brightness(0.97);
+        box-shadow: 0 8px 18px rgba(15, 31, 61, 0.18);
+      }
+      .solution-cta:focus-visible {
+        outline: 3px solid rgba(232, 160, 32, 0.45);
+        outline-offset: 3px;
+      }
+      .solution-cta-arrow {
+        flex: 0 0 auto;
+        font-size: 17px;
+        transition: transform 0.18s ease;
+      }
+      .solution-cta:hover .solution-cta-arrow {
+        transform: translateX(3px);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .solution-cta,
+        .solution-cta-arrow {
+          transition: none;
+        }
+      }
       .tool-card-disclaimer {
         font-size: 0.75rem;
         color: rgba(255, 255, 255, 0.35);
@@ -1153,6 +1228,19 @@
         max-width: 520px;
         margin-left: auto;
         margin-right: auto;
+      }
+
+      .schedule-call-link {
+        width: 100%;
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      .schedule-call-link:focus-visible {
+        outline: 3px solid var(--gold);
+        outline-offset: 4px;
       }
 
       /* ── FOOTER ─────────────────────────────────────────── */
@@ -1299,7 +1387,16 @@
         <div class="nav-links">
           <ul>
             <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="/promo.html">Promo Catalog</a></li>
+            <li>
+              <a href="https://app.schoolsolutionsglobal.com/fundraising-options/?repId=reccFO08dRX4hlpGd"
+                >Fundraising Options</a
+              >
+            </li>
+            <li>
+              <a href="https://app.schoolsolutionsglobal.com/apparel-merch/"
+                >Promo Catalog</a
+              >
+            </li>
             <li>
               <a href="https://schoolsolutionsglobal.com/quote/" target="_blank"
                 >Instant Quote</a
@@ -1325,7 +1422,13 @@
       </p>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">Get Early Access</a>
-        <a href="#how-it-works" class="btn-ghost">See How It Works</a>
+        <a
+          href="https://meet.brevo.com/charlie-rankin"
+          class="btn-ghost"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Schedule a call</a
+        >
       </div>
     </div>
 
@@ -1349,12 +1452,18 @@
               — so you can spend your time leading your program, not managing
               the logistics of it.
             </p>
-            <a
-              href="#contact"
-              class="btn-primary"
-              style="margin-top: 32px; display: inline-block"
-              >Get Early Access</a
-            >
+            <div class="bridge-actions">
+              <a
+                href="https://app.schoolsolutionsglobal.com/fundraising-options/?repId=reccFO08dRX4hlpGd"
+                class="btn-primary"
+                >Fundraising Solutions</a
+              >
+              <a
+                href="https://app.schoolsolutionsglobal.com/apparel-merch/"
+                class="btn-primary btn-primary--navy"
+                >Apparel &amp; Gear Solutions</a
+              >
+            </div>
           </div>
           <div class="quote-block">
             <div class="quote-text">
@@ -1586,6 +1695,17 @@
                   >✓</span
                 >Volunteer sign-up management
               </li>
+              <li class="solution-cta-row">
+                <a
+                  class="solution-cta"
+                  href="https://app.schoolsolutionsglobal.com/fundraising-options/?repId=reccFO08dRX4hlpGd"
+                  >Explore fundraising options<span
+                    class="solution-cta-arrow"
+                    aria-hidden="true"
+                    >→</span
+                  ></a
+                >
+              </li>
             </ul>
           </div>
 
@@ -1732,6 +1852,17 @@
                   >✓</span
                 >Teams, staff, or school-wide orders
               </li>
+              <li class="solution-cta-row">
+                <a
+                  class="solution-cta solution-cta--navy"
+                  href="https://app.schoolsolutionsglobal.com/apparel-merch/"
+                  >Browse apparel &amp; merch<span
+                    class="solution-cta-arrow"
+                    aria-hidden="true"
+                    >→</span
+                  ></a
+                >
+              </li>
             </ul>
           </div>
 
@@ -1865,25 +1996,15 @@
                   >✓</span
                 >Quotes within a day
               </li>
-              <li
-                style="
-                  display: flex;
-                  gap: 8px;
-                  font-size: 13.5px;
-                  color: var(--text);
-                "
-              >
-                <span
-                  style="color: var(--gold); font-weight: 700; flex-shrink: 0"
-                  >✓</span
-                ><a
-                  href="/promo.html"
-                  style="
-                    color: var(--gold);
-                    font-weight: 600;
-                    text-decoration: underline;
-                  "
-                  >Browse the full catalog →</a
+              <li class="solution-cta-row">
+                <a
+                  class="solution-cta"
+                  href="https://app.schoolsolutionsglobal.com/apparel-merch/"
+                  >Browse the full catalog<span
+                    class="solution-cta-arrow"
+                    aria-hidden="true"
+                    >→</span
+                  ></a
                 >
               </li>
             </ul>
@@ -2475,7 +2596,7 @@
         <h2>You got into this <em>to change lives.</em></h2>
         <p style="margin-bottom: 32px">Let's get started.</p>
 
-        <!-- SMS SIGNUP FORM -->
+        <!-- EARLY ACCESS SIGNUP FORM -->
         <form
           id="ssg-signup"
           style="
@@ -2582,9 +2703,8 @@
               line-height: 1.6;
             "
           >
-            By submitting, you agree to receive occasional SMS updates from SSG
-            about tools, tips, and early access news. Reply STOP anytime to opt
-            out.
+            By submitting, you're requesting early access to SSG. We'll use
+            these details to follow up on your request.
           </p>
         </form>
 
@@ -2612,9 +2732,17 @@
           <p
             style="font-size: 15px; color: rgba(255, 255, 255, 0.7); margin: 0"
           >
-            Watch for a text from SSG. We'll be in touch soon.
+            Thanks for requesting early access. We'll be in touch soon.
           </p>
         </div>
+
+        <a
+          href="https://meet.brevo.com/charlie-rankin"
+          class="btn-ghost schedule-call-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Schedule a call</a
+        >
 
         <!-- DISTRIBUTOR FORM REMOVED -->
         <div style="display:none;" aria-hidden="true">
@@ -2743,8 +2871,7 @@
                 line-height: 1.6;
               "
             >
-              By submitting, you agree to receive occasional SMS updates from
-              SSG. Reply STOP anytime to opt out.
+              We'll use these details to follow up about partnering with SSG.
             </p>
           </form>
 
@@ -2859,7 +2986,11 @@
         <ul class="footer-links">
           <li><a href="#how-it-works">How It Works</a></li>
           <li><a href="#why-ssg">Why SSG</a></li>
-          <li><a href="/promo.html">Promo Catalog</a></li>
+          <li>
+            <a href="https://app.schoolsolutionsglobal.com/apparel-merch/"
+              >Promo Catalog</a
+            >
+          </li>
           <li>
             <a href="https://schoolsolutionsglobal.com/quote/" target="_blank"
               >Instant Quote</a
