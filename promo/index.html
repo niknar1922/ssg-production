@@ -7,21 +7,21 @@
   <meta name="description" content="Spirit wear, field-day prizes, teacher gifts, lanyards, drinkware and more — school-friendly pricing, low minimums, fast turnaround." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy:       #0f1f3d;
-      --navy-light: #162848;
-      --gold:       #e8a020;
-      --gold-light: #fdf4e3;
-      --gold-border: rgba(232,160,32,0.35);
+      --navy:       hsl(222 52% 13%);
+      --navy-light: hsl(222 52% 18%);
+      --gold:       hsl(43 88% 52%);
+      --gold-light: hsl(43 88% 92%);
+      --gold-border: rgba(241,188,29,0.35);
       --slate:      #64748b;
-      --border:     #e2e8f0;
-      --bg:         #ffffff;
-      --bg-soft:    #f8fafc;
-      --text:       #1e293b;
+      --border:     hsl(38 18% 86%);
+      --bg:         #fffdf8;
+      --bg-soft:    hsl(38 28% 95%);
+      --text:       hsl(222 47% 11%);
       --radius:     12px;
       --max:        1140px;
     }
@@ -29,9 +29,9 @@
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', system-ui, sans-serif;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
       color: var(--text);
-      background: var(--bg);
+      background: var(--bg-soft);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
@@ -56,8 +56,9 @@
       align-items: center;
       justify-content: space-between;
     }
-    .logo { font-size: 15px; font-weight: 700; color: var(--navy); letter-spacing: -0.01em; }
-    .logo span { color: var(--gold); }
+    .logo { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 700; color: var(--navy); letter-spacing: -0.01em; }
+    .logo-mark { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 8px; background: var(--gold); color: var(--navy) !important; font: 700 11px/1 'Space Mono', monospace; letter-spacing: -0.04em; }
+    .logo-name span { color: var(--gold); }
     nav ul { list-style: none; display: flex; gap: 32px; }
     nav a { font-size: 14px; font-weight: 500; color: var(--slate); transition: color 0.15s; }
     nav a:hover { color: var(--navy); }
@@ -77,64 +78,93 @@
     .hero {
       background: var(--navy);
       color: #fff;
-      padding: 96px 24px 80px;
-      text-align: center;
+      padding: 72px 24px 62px;
+      text-align: left;
       position: relative;
       overflow: hidden;
+      min-height: 510px;
+      display: flex;
+      align-items: center;
     }
+    .hero-inner { width: 100%; max-width: var(--max); margin: 0 auto; position: relative; z-index: 1; }
     .hero::before {
       content: '';
       position: absolute; inset: 0;
       background:
-        radial-gradient(ellipse 60% 50% at 50% -10%, rgba(232,160,32,0.18) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 40% at 80% 110%, rgba(232,160,32,0.10) 0%, transparent 70%);
+        radial-gradient(ellipse 60% 50% at 20% -10%, rgba(241,188,29,0.14) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 70% 110%, rgba(241,188,29,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 250px; height: 250px;
+      right: max(6vw, 36px); top: 128px;
+      border: 22px dashed rgba(241,188,29,0.2);
+      border-radius: 50%;
+      transform: rotate(-18deg);
       pointer-events: none;
     }
     .hero-eyebrow {
       display: inline-block;
-      background: rgba(232,160,32,0.18);
       color: var(--gold);
-      border: 1px solid var(--gold-border);
-      font-size: 12px; font-weight: 600;
-      letter-spacing: 0.08em; text-transform: uppercase;
-      padding: 6px 16px; border-radius: 100px; margin-bottom: 32px;
+      font: 700 11px/1.4 'Space Mono', monospace;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      margin-bottom: 20px;
     }
     .hero h1 {
-      font-size: clamp(34px, 5.5vw, 62px);
+      font-size: clamp(38px, 5vw, 60px);
       font-weight: 800; line-height: 1.08;
-      letter-spacing: -0.03em;
-      max-width: 820px; margin: 0 auto 24px;
+      letter-spacing: -0.045em;
+      max-width: 760px; margin: 0 0 24px;
     }
-    .hero h1 em { font-style: normal; color: var(--gold); }
+    .hero h1 em {
+      color: #fff;
+      font-style: normal;
+      text-decoration: underline;
+      text-decoration-color: var(--gold);
+      text-decoration-thickness: 4px;
+      text-underline-offset: 7px;
+    }
     .hero-sub {
       font-size: clamp(16px, 2vw, 19px);
-      color: rgba(255,255,255,0.72);
-      max-width: 580px; margin: 0 auto 48px; line-height: 1.6;
+      color: rgba(255,255,255,0.76);
+      max-width: 590px; margin: 0 0 30px; line-height: 1.65;
     }
-    .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .hero-actions { display: flex; gap: 12px; justify-content: flex-start; flex-wrap: wrap; }
     .btn-primary {
       background: var(--gold); color: var(--navy);
-      font-weight: 700; font-size: 15px;
-      padding: 14px 28px; border-radius: 8px;
-      transition: background 0.15s; display: inline-block;
+      font-weight: 700; font-size: 14px;
+      min-height: 44px; padding: 12px 22px; border-radius: 8px;
+      transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
     }
-    .btn-primary:hover { background: #d4911c; }
+    .btn-primary:hover { background: #e2aa13; transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0,0,0,0.16); }
     .btn-ghost {
       background: rgba(255,255,255,0.1); color: #fff;
       border: 1.5px solid rgba(255,255,255,0.25);
-      font-weight: 600; font-size: 15px;
-      padding: 14px 28px; border-radius: 8px;
+      font-weight: 600; font-size: 14px;
+      min-height: 44px; padding: 12px 20px; border-radius: 8px;
       transition: all 0.15s; display: inline-block;
     }
     .btn-ghost:hover { background: rgba(255,255,255,0.18); }
 
     .hero-stats {
-      display: flex; justify-content: center;
-      gap: 40px; margin-top: 56px; flex-wrap: wrap;
+      display: flex; justify-content: flex-start;
+      gap: 34px; margin-top: 42px; flex-wrap: wrap;
     }
-    .hero-stat { text-align: center; }
+    .hero-stat { text-align: left; }
     .hero-stat .num { font-size: 28px; font-weight: 800; color: var(--gold); display: block; line-height: 1; }
     .hero-stat .lbl { font-size: 11px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px; display: block; }
+    @media (max-width: 640px) {
+      .hero { min-height: 0; padding: 68px 20px 48px; }
+      .hero::after { display: none; }
+      .hero h1 { font-size: clamp(36px, 9vw, 48px); }
+      .hero-actions { width: 100%; flex-direction: column; align-items: stretch; }
+      .hero-actions a { width: 100%; text-align: center; }
+      .hero-stats { gap: 18px 26px; margin-top: 34px; }
+      .hero-stat .num { font-size: 24px; }
+    }
 
     /* ── INTRO ─────────────────────────────────────────── */
     .intro {
@@ -150,6 +180,7 @@
     @media (max-width: 760px) { .intro-inner { grid-template-columns: 1fr; gap: 36px; } }
     .section-eyebrow {
       font-size: 11px; font-weight: 700;
+      font-family: 'Space Mono', monospace;
       letter-spacing: 0.1em; text-transform: uppercase;
       color: var(--gold); margin-bottom: 12px;
     }
@@ -172,7 +203,7 @@
     .check-list .ck { color: var(--gold); font-weight: 700; flex-shrink: 0; }
 
     /* ── CATALOG ───────────────────────────────────────── */
-    .catalog { padding: 72px 24px 56px; }
+    .catalog { padding: 72px 24px 56px; background: var(--bg-soft); }
     .catalog-inner { max-width: var(--max); margin: 0 auto; }
     .catalog-head {
       display: flex; justify-content: space-between;
@@ -206,13 +237,15 @@
       border-radius: 4px 4px 0 0; flex-shrink: 0;
     }
     .drawer-name { font-size: 16px; font-weight: 700; color: var(--navy); }
+    a.drawer-name { text-decoration: underline; text-underline-offset: 4px; }
+    a.drawer-name:hover { color: #9a6700; }
     .drawer-why { font-size: 13px; color: var(--slate); margin-left: auto; }
     @media (max-width: 600px) { .drawer-why { display: none; } }
 
     .card-row {
       display: flex; flex-wrap: wrap;
       border: 1px solid var(--border);
-      border-radius: 0 var(--radius) var(--radius) var(--radius);
+      border-radius: var(--radius);
       overflow: hidden;
     }
     .cat-card {
@@ -224,6 +257,7 @@
       transition: background 0.15s;
     }
     .cat-card:hover { background: var(--gold-light); }
+    .cat-card:focus-visible { outline-offset: -4px; background: var(--gold-light); }
 
     /* Image-enabled card */
     .cat-card.has-img { padding: 0; overflow: hidden; }
@@ -341,6 +375,12 @@
     .footer-links { list-style: none; display: flex; gap: 24px; flex-wrap: wrap; }
     .footer-links a { font-size: 13px; color: rgba(255,255,255,0.5); transition: color 0.15s; }
     .footer-links a:hover { color: #fff; }
+    a:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn-primary, .btn-ghost { transition: none; }
+      .btn-primary:hover { transform: none; }
+    }
   </style>
 </head>
 <body>
@@ -348,7 +388,7 @@
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="/" class="logo">School Solutions <span>Global</span></a>
+    <a href="/" class="logo"><span class="logo-mark" aria-hidden="true">SSG</span><span class="logo-name">School Solutions <span>Global</span></span></a>
     <div class="nav-links">
       <ul>
         <li><a href="/">Home</a></li>
@@ -362,11 +402,12 @@
 
 <!-- HERO -->
 <div class="hero">
+  <div class="hero-inner">
   <div class="hero-eyebrow">Promotional Products · K–12 Edition</div>
   <h1>Less time on paperwork.<br/>More time on your program.<br/><em>That's the difference.</em></h1>
   <p class="hero-sub">Schools spend more time than they should chasing down new vendors, filling out forms, and waiting for sign-offs. SSG is already on many district approved vendor lists — which means you get what you need, right when you need it.</p>
   <div class="hero-actions">
-    <a href="#catalog" class="btn-primary">Browse the catalog</a>
+    <a href="https://app.schoolsolutionsglobal.com/apparel-merch/" class="btn-primary" target="_blank" rel="noopener noreferrer">Browse the full catalog <span aria-hidden="true">↗</span></a>
     <a href="#contact" class="btn-ghost">Get a quote</a>
   </div>
   <div class="hero-stats">
@@ -374,6 +415,7 @@
     <div class="hero-stat"><span class="num">Low</span><span class="lbl">Minimums</span></div>
     <div class="hero-stat"><span class="num">Fast</span><span class="lbl">Turnaround</span></div>
     <div class="hero-stat"><span class="num">K–12</span><span class="lbl">Focused</span></div>
+  </div>
   </div>
 </div>
 
@@ -406,7 +448,7 @@
       <h2>The catalog, by category</h2>
       <span class="catalog-count" id="item-count"></span>
     </div>
-    <p class="catalog-note">A working sample of what we stock and can quote fast. If it's not listed, ask anyway — this is a fraction of our full line.</p>
+    <p class="catalog-note">A working sample of what we stock and can quote fast. Select a category or item to search the full catalog. Results open in a new tab. If it's not listed, ask anyway — this is a fraction of our full line.</p>
     <div id="catalog-body">
       <div class="sheet-status">
         <div class="spinner"></div>
@@ -742,6 +784,10 @@ function esc(str) {
   return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
+function catalogSearchUrl(keyword) {
+  return `https://crankinenterprises.espwebsite.com/productresults/?searchterms=${encodeURIComponent(String(keyword).trim())}`;
+}
+
 function renderCatalog(groups) {
   const body = document.getElementById('catalog-body');
   const countEl = document.getElementById('item-count');
@@ -755,13 +801,13 @@ function renderCatalog(groups) {
     html += `<div class="drawer-group">
       <div class="drawer-label">
         <span class="drawer-tab">${esc(group.num)}</span>
-        <span class="drawer-name">${esc(group.name)}</span>
+        <a class="drawer-name" href="${esc(catalogSearchUrl(group.name))}" target="_blank" rel="noopener noreferrer">${esc(group.name)}</a>
         <span class="drawer-why">${esc(group.why)}</span>
       </div>
       <div class="card-row">`;
     group.items.forEach(item => {
       const hasImg = !!item.imgUrl;
-      html += `<div class="cat-card${hasImg ? ' has-img' : ''}">`;
+      html += `<a class="cat-card${hasImg ? ' has-img' : ''}" href="${esc(catalogSearchUrl(item.name))}" target="_blank" rel="noopener noreferrer">`;
       if (hasImg) {
         html += `<img class="card-img" src="${esc(item.imgUrl)}" alt="${esc(item.name)}" loading="lazy" />
                  <div class="card-body">`;
@@ -769,7 +815,7 @@ function renderCatalog(groups) {
       html += `<span class="idx">${esc(item.code)}</span>
                <span class="name">${esc(item.name)}</span>`;
       if (hasImg) html += `</div>`;
-      html += `</div>`;
+      html += `</a>`;
     });
     html += `</div></div>`;
   });
